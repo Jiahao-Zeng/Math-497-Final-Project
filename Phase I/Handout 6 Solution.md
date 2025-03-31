@@ -1,4 +1,4 @@
-# Handout 6
+# Handout 6 Solution
 
 Given the traffic flow model:
 
@@ -29,7 +29,8 @@ $$
 p_j^{n+1} = \left[ \gamma + (1-v) \left( 1 - \frac{\gamma}{2} \right) \right] p_j^n - \frac{\gamma}{2} p_{j+1}^n + v \left( 1 - \frac{\gamma}{2} \right) p_{j-1}^n
 $$
 
-1) 
+### Question 1 Solution
+
 Using basic algebra, we can rewrite the equation $\frac{p_j^{n+1} - p_j^n}{\Delta t} + v \frac{p_j^n - p_{j-1}^n}{\Delta x} = 0$ to 
 $\frac{p_j^{n+1} - p_j^n}{\Delta t} = -v \frac{p_j^n - p_{j-1}^n}{\Delta x}$ 
 Also, we will change $v$ to $\bar{v}$ for better clarity from nu ($\nu$). Continuing, we multiply by $\Delta t$ to get $$p_j^{n+1} - p_j^n = \frac{[-\bar{v}(p_j^n - p_{j-1}^n)]\Delta t}{\Delta x}$$
@@ -48,4 +49,5 @@ $$P_{j}^{n+1} = -\nu P_{j}^{n}+ P_{j}^{n} + \nu P_{j-1}^{n}$$
 Factor $P_{j}^{n}$ out for the solution 
 $$\boxed{P_{j}^{n+1} = (1-v)P_{j}^{n} + \nu P_{j-1}^{n} }$$
 
-2)
+### Question 2 Solution
+Changing velocity to something other than 1 gives us $\frac{\bar{v}\Delta t}{\Delta x}$ which gives us something different for v but does not change the formulation
