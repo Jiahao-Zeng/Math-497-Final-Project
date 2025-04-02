@@ -31,6 +31,12 @@ for i in i_values:
     
     errors[dx] = error_vals
 
+# Print error table
+print("\nError Table:")
+print(f"{'Δx':<10}{'t=0.2':<10}{'t=0.4':<10}{'t=0.6':<10}{'t=0.8':<10}{'t=1.0':<10}")
+for dx, err in errors.items():
+    print(f"{dx:<10.6f}{err[0]:<10.6f}{err[1]:<10.6f}{err[2]:<10.6f}{err[3]:<10.6f}{err[4]:<10.6f}")
+
 # Plot errors for t = 0.4 and t = 1 against different dx values
 plt.figure(figsize=(8,6))
 for idx, t in enumerate(t_values):
