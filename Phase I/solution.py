@@ -106,3 +106,27 @@ plt.legend()
 plt.title('Exact vs Approximated Solution at t=0.5')
 plt.grid()
 plt.show()
+
+# Question 4: Plot the exact solution and approximated solution surfaces
+dx = (1/2)**6  # Given dx for part 4
+dt = 0.8 * dx  # Given dt condition
+M = int(1/dx)  # Number of spatial points
+N = int(T/dt)  # Number of time steps
+
+P = np.zeros((N+1, M+1))  # Initialize P array
+P[:, 0] = rho_l  # Boundary condition
+
+for n in range(N):
+    for j in range(1, M+1):
+        P[n+1, j] = (1-v) * P[n, j] + v * P[n, j-1]
+
+X, T_vals = np.meshgrid(np.linspace(0, 1, M+1), np.linspace(0, T, N+1))
+
+fig = plt.figure(figsize=(10,7))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(X, T_vals, P, cmap='viridis')
+ax.set_xlabel('Position x')
+ax.set_ylabel('Time t')
+ax.set_zlabel('Density')
+ax.set_title('Approximated Solution Surface')
+plt.show()
