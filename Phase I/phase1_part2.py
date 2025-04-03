@@ -25,7 +25,7 @@ for n in range(N):
 # Extract solution at x = 0.5
 x_index = int(0.5 / dx)
 t_exact = np.linspace(0, 1, N+1)
-rho_exact = np.array([rho_l if v*t < 0.5 else 0 for t in t_exact])
+rho_exact = np.array([0 if t < 0.5 else rho_l for t in t_exact])
 
 plt.figure(figsize=(8,6))
 plt.plot(t_exact, P[:, x_index], label='Numerical Solution', linestyle='--', marker='o')
