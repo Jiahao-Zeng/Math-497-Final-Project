@@ -12,7 +12,7 @@ t_values = [0.2, 0.4, 0.6, 0.8, 1.0]
 # Question 2: Compute and plot the exact and numerical solution at x = 0.5
 dx = (1/2)**6  # Given dx for part 2
 dt = 0.8 * dx  # Given dt condition
-M = int(1/dx)  # Number of spatial points
+M = int(1/dx)  # Number of x points
 N = int(T/dt)  # Number of time steps
 
 P = np.zeros((N+1, M+1))  # Initialize P array
@@ -37,11 +37,11 @@ plt.title('Exact vs Approximated Solution at x=0.5')
 plt.grid()
 plt.show()
 
-# Question 1: Compute and tabulate the error for different dx values
+# Question 1: Error for different deltax
 for i in i_values:
     dx = (1/2)**i
     dt = 0.8 * dx  # Given dt condition
-    M = int(1/dx)  # Number of spatial points
+    M = int(1/dx)  # Number of x points
     N = int(T/dt)  # Number of time steps
     
     P = np.zeros((N+1, M+1))  # Initialize P array
@@ -66,7 +66,7 @@ print(f"{'Δx':<10}{'t=0.2':<10}{'t=0.4':<10}{'t=0.6':<10}{'t=0.8':<10}{'t=1.0':
 for dx, err in errors.items():
     print(f"{dx:<10.6f}{err[0]:<10.6f}{err[1]:<10.6f}{err[2]:<10.6f}{err[3]:<10.6f}{err[4]:<10.6f}")
 
-# Plot errors for t = 0.4 and t = 1 against different dx values
+# Plot errors for t = 0.4 and t = 1 against different deltax values
 plt.figure(figsize=(8,6))
 for idx, t in enumerate(t_values):
     plt.plot(errors.keys(), [err[idx] for err in errors.values()], marker='o', label=f't={t}')
