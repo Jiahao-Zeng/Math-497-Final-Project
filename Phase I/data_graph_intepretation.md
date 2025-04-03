@@ -2,7 +2,7 @@ Relating to the two exact vs approximate solution graphs, they show the discreti
 ![Exact vs Approximated Solution at x=0.5](images/exact_vs_approx_x05.png)
 
 For the Error vs Δx for different t values graph, we can see various t values plotted along a graph with an x-axis of Δx and a y-axis of the error. For each t value, the futher it gets from the starting point, the more the error increases. Reducing Δx reduces the error. As t increases, the error increases as well.
-![Error vs Δx for different t value](images/approx_sol_surface.png)
+![Error vs Δx for different t value](images/error_vs_deltax.png)
 
 For the Exact vs Approximated Solution at t=0.5, the exact solution has a sharp discontinuity at $x \approx 0.25$, indicating numerical diffusion, a common issue with methods like our upwind scheme we are using. The first-order upwind scheme introduces numerical diffusion (also called artificial viscosity), which smooths out sharp discontinuities in the solution.
 ![Exact vs Approximated Solution at t=0.5](images/exact_vs_approx_t05.png)
