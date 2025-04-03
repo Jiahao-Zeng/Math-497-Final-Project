@@ -37,7 +37,7 @@ plt.title('Exact vs Approximated Solution at x=0.5')
 plt.grid()
 plt.show()
 
-# Question 1: Compute and tabulate the error for different dx values
+# Question 1: Compute and print error for different dx
 for i in i_values:
     dx = (1/2)**i
     dt = 0.8 * dx  # Given dt condition
