@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Given parameters
-rho_l = 0.75
+rho_l = 0.75 ## question 6 changing rho to 0.75
 v = 0.5  # Given in the problem
 T = 2  # Final time
 i_values = [3, 4, 5, 6, 7, 8]
