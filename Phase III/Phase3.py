@@ -162,3 +162,5 @@ for gamma in gamma_values:
     plt.legend()
     plt.grid()
     plt.show()
+
+# Gif maker on separate file
