@@ -1,0 +1,10 @@
+
+![Error vs Delta x for different gamma values](images/error_vs_deltax_gamma.png)
+
+![Exact vs Approx Solution at t=0.4](images/exact_vs_approx_t04.png)
+
+![Exact vs Approx Solution at x=0.5](images/exact_vs_approx_x05.png)
+
+![Period IC/BC: Exact vs Approx at gamma=0](images/period_icbc_exact_vs_approx_gamma0.png)
+
+![Period IC/BC: Exact vs Approx at gamma=1.75](images/period_icbc_exact_vs_approx_gamma175.png)
