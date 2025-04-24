@@ -8,3 +8,5 @@
 ![Period IC/BC: Exact vs Approx at gamma=0](images/period_icbc_exact_vs_approx_gamma0.png)
 
 ![Period IC/BC: Exact vs Approx at gamma=1.75](images/period_icbc_exact_vs_approx_gamma175.png)
+
+![GIF](images/advection_evolution.gif)
