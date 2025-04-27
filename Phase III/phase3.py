@@ -44,6 +44,13 @@ for gamma in gamma_values:
             error = dx * np.sum(np.abs(rho_exact - P[n_t, :]))
             error_results[gamma].setdefault(t, []).append((dx, error))
 
+print("\nError Table (t = 0.4)\n")
+print(f"{'γ':>6} {'Δx':>12} {'Error':>12}")
+print("-" * 32)
+for gamma in gamma_values:
+    for dx, err in error_results[gamma][0.4]:
+        print(f"{gamma:6.2f} {dx:12.5e} {err:12.5e}")
+print()
 # Plotting error at t = 0.4 with distinct styles
 plt.figure(figsize=(8,6))
 
