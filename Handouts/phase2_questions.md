@@ -1,7 +1,10 @@
+# Final Project
+## Phase 2
+
 Given the following discretized equation for computing the density:
 
 $$
-P_j^{n+1} = \left[\gamma + (1 - \nu) \left(1 - \frac{\gamma}{2} \right) \right] P_j^n - \frac{\gamma}{2} P_j^{n-1} + \nu \left(1 - \frac{\gamma}{2} \right) P_{j-1}^n
+P_j^{n+1} = \left[\gamma + (1 - \nu) \left(1 - \frac{\gamma}{2} \right) \right] P_j^n - \frac{\gamma}{2} P_j^{n-1} + \nu \left(1 - \frac{\gamma}{2} \right) P_{j-1}^{n}
 $$
 
 
@@ -16,7 +19,7 @@ $$
 
 Start working on the following problems with $\rho_{l}=0.5$ and $\gamma=1.75$
 
-1. Calculate the approximation errors $\|\|E^n\|\| = \Delta x \sum_{j=0}^M |\rho_j^n - P_j^n|$ for $\Delta x = \left( \frac{1}{2} \right)^i$, $i = 4, 5, 6, 7, 8$; See below for choice of $\Delta t$, at $t = .2, .4, .6, .8, 1$. Form a table of error values and plot the error values at $t = .4,\ 1$ vs different $\Delta x$ values.
+1. Calculate the approximation errors $\|E^n\| = \Delta x \sum_{j=0}^M |\rho_j^n - P_j^n|$ for $\Delta x = \left( \frac{1}{2} \right)^i$, $i = 4, 5, 6, 7, 8$; See below for choice of $\Delta t$, at $t = .2, .4, .6, .8, 1$. Form a table of error values and plot the error values at $t = .4,\ 1$ vs different $\Delta x$ values.
 
 2. Plot the exact solution and approximated solution for $0 \leq t \leq T$ at $x = .5$ with $\Delta x = \left( \frac{1}{2} \right)^6$; See below for choice of $\Delta t$.
 
@@ -27,3 +30,11 @@ Start working on the following problems with $\rho_{l}=0.5$ and $\gamma=1.75$
 5. Interpret your data and graphs in parts 1 to 3 in terms of accuracy of the approximated solution and the contributing factors.
 
 6. Repeat questions 1 to 5 for $\rho_L = 0.25,\ 0.75$.
+
+The velocity and final time values for your projects are selected as follows:
+
+1. $\bar{v} = 0.5$, $T = 2$, $\Delta t = 0.8 \Delta x \left( \frac{2 - \gamma}{2 + \gamma} \right)$; Team 4 
+2. $\bar{v} = 0.75$, $T = 2$, $\Delta t = 0.8 \Delta x \left( \frac{2 - \gamma}{2 + \gamma} \right)$; Team 2
+3. $\bar{v} = 1.25$, $T = \frac{5}{4}$, $\Delta t = 0.8 \Delta x \frac{1}{\bar{v}} \left( \frac{2 - \gamma}{2 + \gamma} \right)$; Team 3
+4. $\bar{v} = 1.5$, $T = \frac{3}{2}$, $\Delta t = 0.8 \Delta x \frac{1}{\bar{v}} \left( \frac{2 - \gamma}{2 + \gamma} \right)$; Team 5
+5. $\bar{v} = 1.75$, $T = \frac{7}{4}$, $\Delta t = 0.8 \Delta x \frac{1}{\bar{v}} \left( \frac{2 - \gamma}{2 + \gamma} \right)$; Team 1
