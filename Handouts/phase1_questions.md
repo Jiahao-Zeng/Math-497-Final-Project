@@ -19,7 +19,7 @@ $$
 
 Start working on the following problems with $\rho_l = 0.5$:
 
-1. Calculate the approximation errors $\|\| E^n \|\| = \Delta x \sum_{j=0}^M \lvert \rho_j^n - P_j^n \rvert$ for $\Delta x = (\tfrac12)^i$, $i = 3,4,5,6,7,8$; $\Delta t = 0.8\Delta x$ at $t = 0.2,0.4,0.6,0.8,1$. Form a table of error values and plot the error values at $t = 0.4,1$ vs. different $\Delta x$ values.
+1. Calculate the approximation errors $\text{||} E^n \text{||} = \Delta x \sum_{j=0}^M \lvert \rho_j^n - P_j^n \rvert$ for $\Delta x = (\tfrac12)^i$, $i = 3,4,5,6,7,8$; $\Delta t = 0.8\Delta x$ at $t = 0.2,0.4,0.6,0.8,1$. Form a table of error values and plot the error values at $t = 0.4,1$ vs. different $\Delta x$ values.
 
 2. Plot the exact solution and approximated solution for $0 \le t \le 1$ at $x = 0.5$ with $\Delta x = (\tfrac12)^6$; $\Delta t = 0.8\Delta x$.
 
