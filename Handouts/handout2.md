@@ -68,5 +68,3 @@ $$
 &y_{0}=1 \\
 \end{align}
 $$
-
-Solution for #2 ~~![[Pasted image 20250317104813.png]]~~
