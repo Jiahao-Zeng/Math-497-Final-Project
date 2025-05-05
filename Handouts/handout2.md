@@ -16,7 +16,7 @@ y'' = 4x^3, y(0 = 1),y(1) = 2
 $$
 
 2. Use the Geogebra and come up with the 3D graph of $f(x,y) = x^2-3xy+2y^3$ on the interval $[-1,1]$ by $[-2,2]$
-
+___
 Solution for #1:
 
 $$
