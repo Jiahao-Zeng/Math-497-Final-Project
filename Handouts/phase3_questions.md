@@ -19,7 +19,7 @@ $$
 
 Start working on the following problems with $\rho_{l}=0.5$ and $\gamma=1.75$
 
-1. Calculate the approximation errors $\|E^n\| = \Delta x \sum_{j=0}^M |\rho_j^n - P_j^n|$ for $\Delta x = \left( \frac{1}{2} \right)^i$, $i = 4, 5, 6, 7, 8$; See below for choice of $\Delta t$ and use the $\gamma = 1.75$ for the size of time step, at $t = .2, .4$. Plot the error values at $t = .4$ vs different $\Delta x$ values and for both $\gamma = 0, 1.75$.
+1. Calculate the approximation errors $\text{||} E^n \text{||} = \Delta x \sum_{j=0}^M |\rho_j^n - P_j^n|$ for $\Delta x = \left( \frac{1}{2} \right)^i$, $i = 4, 5, 6, 7, 8$; See below for choice of $\Delta t$ and use the $\gamma = 1.75$ for the size of time step, at $t = .2, .4$. Plot the error values at $t = .4$ vs different $\Delta x$ values and for both $\gamma = 0, 1.75$.
 
 2. Plot the exact solution and approximated solutions with $\gamma = 0, 1.75$ for $0 \leq t \leq T$ at $x = .5$ with $\Delta x = \left( \frac{1}{2} \right)^6$; See below for choice of $\Delta t$ using $\gamma = 1.75$.
 
