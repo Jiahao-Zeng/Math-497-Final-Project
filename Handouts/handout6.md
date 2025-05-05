@@ -26,3 +26,32 @@ Where $p_j^n \approx \rho(x_j, t_n)$ for $j = 0,1, ..., M$; $n = 0,1, ..., N$.
 $$
 p_j^{n+1} = \left[ \gamma + (1-v) \left( 1 - \frac{\gamma}{2} \right) \right] p_j^n - \frac{\gamma}{2} p_{j+1}^n + v \left( 1 - \frac{\gamma}{2} \right) p_{j-1}^n
 $$
+___
+Solution for #1
+
+Using basic algebra, we can rewrite the equation $\frac{p_j^{n+1} - p_j^n}{\Delta t} + v \frac{p_j^n - p_{j-1}^n}{\Delta x} = 0$ to 
+$\frac{p_j^{n+1} - p_j^n}{\Delta t} = -v \frac{p_j^n - p_{j-1}^n}{\Delta x}$ 
+Also, we will change $v$ to $\bar{v}$ for better clarity from nu ($\nu$). Continuing, we multiply by $\Delta t$ to get $$p_j^{n+1} - p_j^n = \frac{[-\bar{v}(p_j^n - p_{j-1}^n)]\Delta t}{\Delta x}$$
+
+From here, we define $$\nu = \frac{\bar{v}\Delta t}{\Delta x}$$
+
+Using nu, we can simplify the equation and move over $P_{j}^n$ to the other side to get 
+$$P_{j}^{n+1} = -\nu[P_{j}^{n}-P_{j-1}^{n}] + P_{j}^{n}$$
+
+Distribute $\nu$ to get 
+$$P_{j}^{n+1} = -\nu P_{j}^{n} + \nu P_{j-1}^{n} + P_{j}^{n}$$
+
+Rearrange the terms for 
+$$P_{j}^{n+1} = -\nu P_{j}^{n}+ P_{j}^{n} + \nu P_{j-1}^{n}$$
+
+Factor $P_{j}^{n}$ out for the solution 
+$$\boxed{P_{j}^{n+1} = (1-v)P_{j}^{n} + \nu P_{j-1}^{n} }$$
+
+<br>
+Solution for #2
+
+Changing velocity to something other than 1 gives us $\frac{\bar{v}\Delta t}{\Delta x}$ which gives us something different for v but does not change the formulation
+
+$$
+P_{j}^{n+1} = \left[ \gamma + \left( 1 - \frac{\bar{v}\Delta t}{\Delta x} \right)\left( 1 - \frac{\gamma}{2} \right) \right] P_{j}^{n} - \frac{\gamma}{2}P_{j}^{n-1} + \frac{\bar{v}\Delta t}{\Delta x}\left( 1 - \frac{\gamma}{2} \right)P_{j-1}^{n}
+$$
