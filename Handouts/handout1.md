@@ -25,7 +25,7 @@ $$
 $$
 
 2. Let $f(x)=e^{2x+1}$. Approximate $f'(0)$ using both formulas with $h = 0.1, 0.01, 0.001$. Evaluate the approximation errors for all the above h values and show it is of order $h^2$
-
+___
 Solution for #1:
  - We must use Taylor series expansion
 
