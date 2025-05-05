@@ -23,7 +23,7 @@ Start working on the following problems with $\rho_{l}=0.5$ and $\gamma=1.75$
 
 2. Plot the exact solution and approximated solutions with $\gamma = 0, 1.75$ for $0 \leq t \leq T$ at $x = .5$ with $\Delta x = \left( \frac{1}{2} \right)^6$; See below for choice of $\Delta t$ using $\gamma = 1.75$.
 
-3. Plot the exact solution and approximated solution for $0 \leq x leq 1$ at $t = .4$ with $\Delta x = \left( \frac{1}{2} \right)^{6}$; See below for choice of $\Delta t$ using $\gamma = 1.75$
+3. Plot the exact solution and approximated solution for $0 \leq x \leq 1$ at $t = .4$ with $\Delta x = \left( \frac{1}{2} \right)^{6}$; See below for choice of $\Delta t$ using $\gamma = 1.75$
 
 4. Interpret your data and graphs in part 1 to 3 in terms of accuracy of the approximated solutions and the contributing factors.
 
