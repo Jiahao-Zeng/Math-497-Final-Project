@@ -3,6 +3,5 @@ layout: default
 title: Home
 ---
 
-[about](/about)
-
-[Handouts](/handouts/)
+[About]({{ '/about/' | relative_url }})
+[Handouts]({{ '/handouts/' | relative_url }})
