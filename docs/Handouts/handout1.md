@@ -1,7 +1,4 @@
 ---
-layout: default
-title: Handout 1
-permalink: /handout1
 ---
 
 Three-point difference is a method for approximating the first derivative of a function at a point besides the Forward, Backward and Centered difference. Given the $h$ value $(h = x_{i+1}-x_{i})$, the three-point difference formula is as follows:

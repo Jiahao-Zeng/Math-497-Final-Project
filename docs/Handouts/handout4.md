@@ -1,7 +1,4 @@
 ---
-layout: default
-title: Handout 4
-permalink: /handout4
 ---
 
 Given the following discretized equation for computing the density:

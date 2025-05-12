@@ -9,3 +9,10 @@ kramdown:
   parse_block_html: true
   math_engine_opts:
     preview: TeX
+
+defaults:
+  - scope:
+      path: "Handouts"
+      type: "pages"
+    values: 
+      layout: default
