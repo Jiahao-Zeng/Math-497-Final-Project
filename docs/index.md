@@ -3,6 +3,6 @@ layout: default
 title: Home
 ---
 
-[about](Math-497-Final-Project/about)
+[about](/about)
 
-[Handouts](Math-497-Final-Project/handouts/)
+[Handouts](/handouts/)
