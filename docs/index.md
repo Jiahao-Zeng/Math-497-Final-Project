@@ -3,6 +3,6 @@ layout: default
 title: Home
 ---
 
-[about](/docs/about)
+[about](/about)
 
-[Handouts](/docs/handouts/)
+[Handouts](/handouts/)

@@ -8,7 +8,7 @@ kramdown:
   math_engine: mathjax
   parse_block_html: true
   math_engine_opts:
-    preview: TeX
+    preview: false
 
 defaults:
   - scope:
