@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-permalink: /about.html
+permalink: /about
 ---
 
 Proin quam ligula, porta suscipit arcu a, dapibus sodales mauris. Sed congue, ipsum quis pellentesque pharetra, ex ante convallis sem, vel placerat mauris nunc a eros. Cras a bibendum sapien. Sed mattis dolor in ex tempus mattis. Aliquam vitae sapien neque. Nullam nec metus non dui ornare finibus sit amet in risus. Etiam vitae augue dolor. Phasellus mollis quam accumsan mauris tincidunt posuere.
