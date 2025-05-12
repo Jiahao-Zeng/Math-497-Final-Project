@@ -1,3 +1,9 @@
+---
+layout: default
+title: Handout 3
+permalink: /handout3
+---
+
 Given the following discretized equation for computing the density of cars using the traffic flow model:
 
 $$

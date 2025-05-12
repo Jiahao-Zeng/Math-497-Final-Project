@@ -1,3 +1,9 @@
+---
+layout: default
+title: Handout 2
+permalink: /handout2
+---
+
 The difference for approximating the second derivative of a function requires the function value at three consecutive points. Given the $h$ value $(h = x_{i+1}-x_{i})$, the three-point difference formula for the 2nd derivative approximation is as follows:
 
 $$

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Handout 6
+permalink: /handout6
+---
+
 Given the traffic flow model:
 
 $$

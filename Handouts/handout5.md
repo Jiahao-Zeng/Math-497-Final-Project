@@ -1,3 +1,9 @@
+---
+layout: default
+title: Handout 5
+permalink: /handout5
+---
+
 Consider the following two steps for a modified version of the upwind scheme:
 
 $$
