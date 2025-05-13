@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-permalink: /about
+permalink: /about/
 ---
 
 This is the repository for our Math 497 Final. Math 497 is a class we are taking at Penn State. What is this course about?
