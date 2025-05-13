@@ -1,7 +1,7 @@
 ---
 layout: default
 title: All Handouts
-permalink: /Math-497-Final-Project/handouts/
+permalink: /handouts/
 ---
 
 # All Handouts
