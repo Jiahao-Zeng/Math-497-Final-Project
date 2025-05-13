@@ -1,1 +1,14 @@
+---
+---
 
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <main class="container mx-auto py-8">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
