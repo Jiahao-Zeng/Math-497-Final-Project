@@ -1,14 +1,26 @@
----
+<!-- ---
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-    <main class="container mx-auto py-8">
-      {{ content }}
-    </main>
-    {% include footer.html %}
-  </body>
-</html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} – {{ site.title }}</title>
+
+  {{ content_for_header }}
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | relative_url }}">Home</a></li>
+        <li><a href="{{ "/about/" | relative_url }}">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html> -->
