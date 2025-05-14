@@ -1,4 +1,6 @@
 ---
+layout: handout
+title: "Handout 5: Analysis Techniques"
 ---
 
 Consider the following two steps for a modified version of the upwind scheme:

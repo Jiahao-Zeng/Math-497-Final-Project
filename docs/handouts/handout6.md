@@ -1,4 +1,6 @@
 ---
+layout: handout
+title: "Handout 6: Final Project Guidelines"
 ---
 
 Given the traffic flow model:

@@ -2,7 +2,24 @@
 layout: default
 ---
 
-<article>
-    <h2 class="major">Handouts</h2>
+<article id="handouts" class="active">
     {{ content }}
-</article> 
+    <p class="handout-nav">
+        <a href="{{ '/' | relative_url }}" class="button special">&larr; Back to Main</a>
+    </p>
+</article>
+
+<style>
+article.active {
+    opacity: 1;
+    visibility: visible;
+}
+.handout-nav {
+    margin-top: 3rem;
+    text-align: left;
+}
+.handout-nav a {
+    border: none;
+    font-size: 0.8em;
+}
+</style> 

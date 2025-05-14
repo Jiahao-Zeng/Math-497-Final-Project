@@ -1,5 +1,9 @@
 ---
+layout: handout
+title: "Handout 1: Three-Point Difference Method"
 ---
+
+## Three-Point Difference Method
 
 Three-point difference is a method for approximating the first derivative of a function at a point besides the Forward, Backward and Centered difference. Given the $h$ value $(h = x_{i+1}-x_{i})$, the three-point difference formula is as follows:
 
@@ -19,7 +23,9 @@ $$
 
 Note that the above two formulas show that the method could be applied as forward three-points or backward three-points difference formulas; i.e. using the next two consecutive points (forward) or the previous two consecutive points (backward).
 
-1. Show that the error using this difference formula for approximating the first derivative at $x_{i}$ is $O(h^2)$. i.e.
+### Exercise 1
+
+Show that the error using this difference formula for approximating the first derivative at $x_{i}$ is $O(h^2)$. i.e.
 
 $$
 \begin{align}
@@ -27,7 +33,10 @@ $$
 \end{align}
 $$
 
-2. Let $f(x)=e^{2x+1}$. Approximate $f'(0)$ using both formulas with $h = 0.1, 0.01, 0.001$. Evaluate the approximation errors for all the above h values and show it is of order $h^2$
+### Exercise 2
+
+Let $f(x)=e^{2x+1}$. Approximate $f'(0)$ using both formulas with $h = 0.1, 0.01, 0.001$. Evaluate the approximation errors for all the above h values and show it is of order $h^2$
+
 ___
 Solution for #1:
  - We must use Taylor series expansion

@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     <noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | relative_url }}" /></noscript>
+    <style>
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 1rem;
+            flex-basis: calc(33.333% - 2rem);
+            min-width: 140px;
+        }
+        @media screen and (max-width: 736px) {
+            nav ul li {
+                flex-basis: calc(50% - 2rem);
+            }
+        }
+        @media screen and (max-width: 480px) {
+            nav ul li {
+                flex-basis: 100%;
+            }
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -25,7 +51,9 @@
             </div>
             <nav>
                 <ul>
-                    {% if page.layout == 'handouts' %}
+                    {% if page.layout == 'handout' %}
+                        <li><a href="{{ '/handouts/' | relative_url }}">Back to Handouts</a></li>
+                    {% elsif page.layout == 'handouts' %}
                         <li><a href="{{ '/' | relative_url }}">Back to Main</a></li>
                     {% else %}
                         <li><a href="#intro">Home</a></li>
@@ -41,7 +69,7 @@
 
         <!-- Main -->
         <div id="main">
-            {% if page.layout == 'handouts' %}
+            {% if page.layout == 'handout' or page.layout == 'handouts' %}
                 {{ content }}
             {% else %}
                 <!-- Intro -->

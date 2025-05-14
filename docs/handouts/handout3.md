@@ -1,4 +1,6 @@
 ---
+layout: handout
+title: "Handout 3: Differential Equations"
 ---
 
 Given the following discretized equation for computing the density of cars using the traffic flow model:

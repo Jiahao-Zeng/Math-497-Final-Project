@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<article id="handout" class="active">
+    <h2 class="major">{{ page.title }}</h2>
+    <p class="handout-nav">
+        <a href="{{ '/handouts/' | relative_url }}" class="button special">&larr; Back to Handouts</a>
+    </p>
+    <div class="handout-content">
+        {{ content }}
+    </div>
+</article>
+
+<style>
+.handout-nav {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.handout-nav a {
+    border: none;
+    font-size: 0.8em;
+}
+.handout-content {
+    text-align: left;
+}
+.handout-content h2, 
+.handout-content h3 {
+    color: #ffffff;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1rem 0;
+}
+.handout-content table {
+    margin: 1rem 0;
+    width: 100%;
+}
+.handout-content table th,
+.handout-content table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+}
+.handout-content table th {
+    background: rgba(255, 255, 255, 0.1);
+}
+article.active {
+    opacity: 1;
+    visibility: visible;
+}
+</style> 

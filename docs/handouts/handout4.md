@@ -1,4 +1,6 @@
 ---
+layout: handout
+title: "Handout 4: Implementation Guide"
 ---
 
 Given the following discretized equation for computing the density:
