@@ -3,9 +3,7 @@ layout: default
 ---
 
 <article id="handouts" class="active">
-    <div class="handout-content">
-        {{ content }}
-    </div>
+    {{ content }}
 </article>
 
 <style>
@@ -13,35 +11,51 @@ article.active {
     opacity: 1;
     visibility: visible;
 }
-.handout-content {
+#handouts {
     text-align: left;
+    max-width: 100%;
+    padding: 2.5rem 2.5rem;
 }
-.handout-content h2 {
-    color: #ffffff;
+#handouts h1 {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
     text-align: center;
-    font-size: 2em;
-    letter-spacing: 0.2em;
-    margin: 0 0 1.5em 0;
 }
-.handout-content ul {
+#handouts p {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+#handouts h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    margin: 2rem 0 1.5rem 0;
+}
+#handouts ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 2rem 0;
 }
-.handout-content ul li {
-    padding: 0.5em 0;
+#handouts ul li {
+    padding: 0.5rem 0;
     border-top: solid 1px rgba(255, 255, 255, 0.15);
 }
-.handout-content ul li:first-child {
+#handouts ul li:first-child {
     border-top: none;
 }
-.handout-content ul li a {
+#handouts ul li a {
     color: #ffffff;
     text-decoration: none;
     border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
-    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 }
-.handout-content ul li a:hover {
+#handouts ul li a:hover {
     border-bottom-color: transparent;
 }
 </style> 
