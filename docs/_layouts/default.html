@@ -1,35 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | relative_url }}" /></noscript>
 </head>
-<body>
-    <header class="site-header">
-        <div class="logo-container">
-            <span class="site-title">497</span>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="icon fa-gem"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Math 497</h1>
+                    <p>Final Project Documentation</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#phase1">Phase I</a></li>
+                    <li><a href="#phase2">Phase II</a></li>
+                    <li><a href="#phase3">Phase III</a></li>
+                    <li><a href="#docs">Documentation</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+            <!-- Intro -->
+            <article id="intro">
+                <h2 class="major">Home</h2>
+                {{ content }}
+            </article>
+
+            <!-- Phase I -->
+            <article id="phase1">
+                <h2 class="major">Phase I</h2>
+                <p>Project setup and initial implementation.</p>
+                <a href="{{ site.github.repository_url }}/tree/main/Phase%20I" class="button">View Phase I</a>
+            </article>
+
+            <!-- Phase II -->
+            <article id="phase2">
+                <h2 class="major">Phase II</h2>
+                <p>Core implementation and development.</p>
+                <a href="{{ site.github.repository_url }}/tree/main/Phase%20II" class="button">View Phase II</a>
+            </article>
+
+            <!-- Phase III -->
+            <article id="phase3">
+                <h2 class="major">Phase III</h2>
+                <p>Final implementation and results.</p>
+                <a href="{{ site.github.repository_url }}/tree/main/Phase%20III" class="button">View Phase III</a>
+            </article>
+
+            <!-- Documentation -->
+            <article id="docs">
+                <h2 class="major">Documentation</h2>
+                <p>Project documentation and resources.</p>
+                <ul>
+                    <li><a href="{{ site.github.repository_url }}/blob/main/README.md">Getting Started</a></li>
+                    <li><a href="{{ site.github.repository_url }}/tree/main/docs/handouts">Project Handouts</a></li>
+                    <li><a href="{{ site.github.repository_url }}">GitHub Repository</a></li>
+                </ul>
+            </article>
         </div>
-    </header>
 
-    <aside class="sidebar">
-        <nav class="site-nav">
-            <ul>
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ site.github.repository_url }}/tree/main/Phase%20I">Phase I</a></li>
-                <li><a href="{{ site.github.repository_url }}/tree/main/Phase%20II">Phase II</a></li>
-                <li><a href="{{ site.github.repository_url }}/tree/main/Phase%20III">Phase III</a></li>
-                <li><a href="{{ site.github.repository_url }}/tree/main/docs/handouts">Handouts</a></li>
-                <li><a href="{{ site.github.repository_url }}/blob/main/README.md">Documentation</a></li>
-                <li><a href="{{ site.github.repository_url }}">GitHub</a></li>
-            </ul>
-        </nav>
-    </aside>
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; {{ site.time | date: '%Y' }} Math 497 Final Project. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
 
-    <main class="main-content">
-        {{ content }}
-    </main>
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/util.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
 </body>
 </html>
