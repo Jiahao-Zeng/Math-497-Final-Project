@@ -93,56 +93,94 @@
                 grid-template-columns: 1fr;
             }
         }
-        #main article.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        /* Add styles for handout pages */
-        body.is-handout #main {
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-        body.is-handout #main article {
-            opacity: 1 !important;
-            visibility: visible !important;
-            display: block !important;
-        }
-        body.is-handout .handout-content {
-            padding: 2rem;
-        }
-        /* Force visibility for handout content */
-        body.is-handout #main,
-        body.is-handout #main article,
-        body.is-handout .handout-content {
-            opacity: 1 !important;
-            visibility: visible !important;
-            display: block !important;
-            transform: none !important;
-        }
-        
-        body.is-handout #header {
-            transform: none !important;
-            filter: none !important;
-            opacity: 1 !important;
-        }
-
-        /* Ensure proper article visibility */
-        #main article.active {
-            opacity: 1 !important;
-            visibility: visible !important;
-            display: block !important;
-            transform: none !important;
-        }
 
         /* Override template's default hiding behavior */
         body.is-article-visible #main,
-        body.is-article-visible #main article {
+        body.is-article-visible #main article,
+        body.is-article-visible #header,
+        body.is-article-visible #footer {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+            filter: none !important;
+        }
+
+        /* Special styles for handouts layout */
+        body.is-handouts-page #main {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+            max-width: none !important;
+            padding: 0 !important;
+        }
+
+        body.is-handouts-page #main article {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+            background: none !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: none !important;
+            position: relative !important;
+        }
+
+        body.is-handouts-page #header {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+        }
+
+        body.is-handouts-page #footer {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+        }
+
+        /* Ensure handout grid is always visible */
+        body.is-handouts-page .handout-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+            gap: 2rem !important;
+            margin: 2rem 0 !important;
             opacity: 1 !important;
             visibility: visible !important;
         }
+
+        body.is-handouts-page .handout-card {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        /* Ensure content is visible */
+        body.is-handouts-page .handouts-content {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+
+        body.is-handouts-page .handouts-content * {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+
+        body.is-handouts-page .handouts-content a {
+            display: inline-block !important;
+        }
+
+        body.is-handouts-page .handouts-content span {
+            display: inline !important;
+        }
     </style>
 </head>
-<body class="is-preload {% if page.layout == 'handout' %}is-handout{% endif %}">
+<body class="is-preload {% if page.layout == 'handouts' %}is-handouts-page{% endif %} {% if page.layout == 'handout' %}is-handout{% endif %}">
 
     <!-- Wrapper -->
     <div id="wrapper">
