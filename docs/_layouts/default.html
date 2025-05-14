@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     <noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | relative_url }}" /></noscript>
+    <!-- MathJax -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true
+            }
+        });
+    </script>
     <style>
         nav ul {
             display: grid;
@@ -96,12 +109,14 @@
             <div class="logo">
                 <span class="icon fa-gem"></span>
             </div>
+            {% unless page.layout == 'handout' %}
             <div class="content">
                 <div class="inner">
                     <h1>Math 497</h1>
                     <p>Final Project Documentation</p>
                 </div>
             </div>
+            {% endunless %}
             <nav>
                 <ul>
                     {% if page.layout == 'handout' %}
@@ -122,47 +137,7 @@
 
         <!-- Main -->
         <div id="main">
-            {% if page.layout == 'handout' or page.layout == 'handouts' %}
-                {{ content }}
-            {% else %}
-                <!-- Intro -->
-                <article id="intro">
-                    <h2 class="major">Home</h2>
-                    {{ content }}
-                </article>
-
-                <!-- Phase I -->
-                <article id="phase1">
-                    <h2 class="major">Phase I</h2>
-                    <p>Project setup and initial implementation.</p>
-                    <a href="{{ site.github.repository_url }}/tree/main/Phase%20I" class="button">View Phase I</a>
-                </article>
-
-                <!-- Phase II -->
-                <article id="phase2">
-                    <h2 class="major">Phase II</h2>
-                    <p>Core implementation and development.</p>
-                    <a href="{{ site.github.repository_url }}/tree/main/Phase%20II" class="button">View Phase II</a>
-                </article>
-
-                <!-- Phase III -->
-                <article id="phase3">
-                    <h2 class="major">Phase III</h2>
-                    <p>Final implementation and results.</p>
-                    <a href="{{ site.github.repository_url }}/tree/main/Phase%20III" class="button">View Phase III</a>
-                </article>
-
-                <!-- Documentation -->
-                <article id="docs">
-                    <h2 class="major">Documentation</h2>
-                    <p>Project documentation and resources.</p>
-                    <ul>
-                        <li><a href="{{ site.github.repository_url }}/blob/main/README.md">Getting Started</a></li>
-                        <li><a href="{{ site.github.repository_url }}/tree/main/docs/handouts">Project Handouts</a></li>
-                        <li><a href="{{ site.github.repository_url }}">GitHub Repository</a></li>
-                    </ul>
-                </article>
-            {% endif %}
+            {{ content }}
         </div>
 
         <!-- Footer -->

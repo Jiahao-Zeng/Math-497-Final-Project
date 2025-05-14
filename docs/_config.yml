@@ -32,6 +32,7 @@ defaults:
       type: "pages"
     values:
       layout: handout
+      permalink: /:path/:basename/
 
 exclude:
   - Gemfile
