@@ -3,10 +3,12 @@ layout: default
 ---
 
 <article id="handouts" class="active">
-    {{ content }}
-    <p class="handout-nav">
-        <a href="{{ '/' | relative_url }}" class="button special">&larr; Back to Main</a>
-    </p>
+    <div class="handout-content">
+        {{ content }}
+    </div>
+    <div class="handout-nav">
+        <a href="{{ '/' | relative_url }}" class="button">&larr; Back to Main</a>
+    </div>
 </article>
 
 <style>
@@ -14,12 +16,29 @@ article.active {
     opacity: 1;
     visibility: visible;
 }
+.handout-content {
+    margin-bottom: 2rem;
+}
 .handout-nav {
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-align: left;
 }
 .handout-nav a {
-    border: none;
-    font-size: 0.8em;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.handout-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.handout-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+.handout-item:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 </style> 
