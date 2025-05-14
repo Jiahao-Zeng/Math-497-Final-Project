@@ -21,3 +21,8 @@ defaults:
       type: "pages"
     values: 
       layout: default
+  - scope:
+      path: "handouts"
+      type: "pages"
+    values:
+      layout: handout

@@ -6,6 +6,7 @@ layout: default
     <h2 class="major">{{ page.title }}</h2>
     <p class="handout-nav">
         <a href="{{ '/handouts/' | relative_url }}" class="button special">&larr; Back to Handouts</a>
+        <a href="{{ '/' | relative_url }}" class="button">&larr; Back to Main</a>
     </p>
     <div class="handout-content">
         {{ content }}
@@ -16,6 +17,8 @@ layout: default
 .handout-nav {
     margin-bottom: 2rem;
     text-align: left;
+    display: flex;
+    gap: 1rem;
 }
 .handout-nav a {
     border: none;
