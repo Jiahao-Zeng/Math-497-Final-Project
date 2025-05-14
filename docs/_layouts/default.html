@@ -6,83 +6,30 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
         <div class="logo-container">
-            <a href="{{ '/' | relative_url }}">
-                <span class="site-title">Math 497 Final Project</span>
-            </a>
-        </div>
-
-        <button class="mobile-menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <nav class="main-nav">
-            <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
-            <a href="{{ '/handouts/' | relative_url }}" {% if page.url contains '/handouts/' %}class="active"{% endif %}>Handouts</a>
-            <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active"{% endif %}>About</a>
-        </nav>
-
-        <div class="cta-buttons">
-            <a href="{{ '/getting-started/' | relative_url }}" class="cta-button primary">Get Started</a>
-            <a href="https://github.com/jiahao-zeng/Math-497-Final-Project" class="cta-button secondary" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
+            <span class="site-title">497</span>
         </div>
     </header>
 
     <aside class="sidebar">
-        <div class="sidebar-section">
-            <h3>Project Phases</h3>
+        <nav class="site-nav">
             <ul>
-                <li><a href="{{ '/Phase I/' | relative_url }}">Phase I: Project Setup</a></li>
-                <li><a href="{{ '/Phase II/' | relative_url }}">Phase II: Implementation</a></li>
-                <li><a href="{{ '/Phase III/' | relative_url }}">Phase III: Results</a></li>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ site.github.repository_url }}/tree/main/Phase%20I">Phase I</a></li>
+                <li><a href="{{ site.github.repository_url }}/tree/main/Phase%20II">Phase II</a></li>
+                <li><a href="{{ site.github.repository_url }}/tree/main/Phase%20III">Phase III</a></li>
+                <li><a href="{{ site.github.repository_url }}/tree/main/docs/handouts">Handouts</a></li>
+                <li><a href="{{ site.github.repository_url }}/blob/main/README.md">Documentation</a></li>
+                <li><a href="{{ site.github.repository_url }}">GitHub</a></li>
             </ul>
-        </div>
-
-        <div class="sidebar-section">
-            <h3>Documentation</h3>
-            <ul>
-                <li><a href="{{ '/getting-started/' | relative_url }}">Getting Started</a></li>
-                <li><a href="{{ '/handouts/' | relative_url }}">Project Handouts</a></li>
-                <li><a href="{{ '/about/' | relative_url }}">About the Project</a></li>
-            </ul>
-        </div>
-
-        <div class="sidebar-section">
-            <h3>Resources</h3>
-            <ul>
-                <li><a href="{{ '/resources/papers/' | relative_url }}">Research Papers</a></li>
-                <li><a href="{{ '/resources/code/' | relative_url }}">Code Samples</a></li>
-                <li><a href="{{ '/resources/links/' | relative_url }}">External Links</a></li>
-            </ul>
-        </div>
+        </nav>
     </aside>
 
     <main class="main-content">
         {{ content }}
     </main>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
-                <a href="{{ '/terms/' | relative_url }}">Terms of Use</a>
-                <a href="mailto:contact@example.com">Contact</a>
-            </div>
-            <p>&copy; {{ site.time | date: '%Y' }} Math 497 Final Project. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-            document.querySelector('.main-nav').classList.toggle('show');
-            document.querySelector('.sidebar').classList.toggle('show');
-        });
-    </script>
 </body>
 </html>
