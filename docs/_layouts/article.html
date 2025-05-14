@@ -1,47 +1,69 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-    <noscript><link rel="stylesheet" href="{{ '/assets/css/noscript.css' | relative_url }}" /></noscript>
-    {% if page.use_math %}
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-    {% endif %}
-</head>
-<body class="is-article-layout">
-    <!-- Wrapper -->
-    <div id="wrapper">
-        <!-- Header -->
-        <header id="header">
-            <h1>{{ page.title }}</h1>
-            <p><a href="{{ site.baseurl }}/" class="button">Back to Main</a></p>
-        </header>
+---
+layout: default
+---
 
-        <!-- Main -->
-        <div id="main">
-            <article class="article-content">
-                {{ content }}
-            </article>
-        </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <p class="copyright">&copy; {{ site.title }}. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
+<article id="article" class="active">
+    <h2 class="major">{{ page.title }}</h2>
+    <p class="article-nav">
+        <a href="{{ '/' | relative_url }}" class="button">&larr; Back to Main</a>
+    </p>
+    <div class="article-content">
+        {{ content }}
     </div>
+</article>
 
-    <!-- BG -->
-    <div id="bg"></div>
-
-    <!-- Scripts -->
-    <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/util.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-</body>
-</html> 
+<style>
+.article-nav {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.article-nav a {
+    border: none;
+    font-size: 0.8em;
+}
+.article-content {
+    text-align: left;
+}
+.article-content h2, 
+.article-content h3 {
+    color: #ffffff;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1rem 0;
+}
+.article-content table {
+    margin: 1rem 0;
+    width: 100%;
+}
+.article-content table th,
+.article-content table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+}
+.article-content table th {
+    background: rgba(255, 255, 255, 0.1);
+}
+article.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    transform: none !important;
+}
+#main {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+.article-content {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+body.is-article-visible #main,
+body.is-article-visible #main article {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+</style> 
