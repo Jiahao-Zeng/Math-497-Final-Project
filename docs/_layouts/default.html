@@ -16,11 +16,13 @@
             margin: 0;
             list-style: none;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         nav ul li {
             text-align: center;
             border-left: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            background: #1b1f22;
         }
         nav ul li:first-child {
             border-left: none;
@@ -43,6 +45,17 @@
         }
         nav ul li a:hover {
             background: rgba(255, 255, 255, 0.075);
+        }
+        #header nav:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -3rem;
+            left: calc(50% - 1px);
+            width: 1px;
+            height: 3rem;
+            background: #ffffff;
+            opacity: 0.25;
         }
         @media screen and (max-width: 980px) {
             nav ul {

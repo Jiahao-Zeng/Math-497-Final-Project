@@ -3,16 +3,16 @@ layout: handouts
 title: Course Handouts
 ---
 
-# Course Handouts
+## Course Handouts
 
 Access all course materials and handouts below:
 
-* [Handout 1: Three-Point Difference Method]({{ '/handouts/handout1.html' | relative_url }})
-* [Handout 2: Numerical Methods]({{ '/handouts/handout2.html' | relative_url }})
-* [Handout 3: Differential Equations]({{ '/handouts/handout3.html' | relative_url }})
-* [Handout 4: Implementation Guide]({{ '/handouts/handout4.html' | relative_url }})
-* [Handout 5: Analysis Techniques]({{ '/handouts/handout5.html' | relative_url }})
-* [Handout 6: Final Project Guidelines]({{ '/handouts/handout6.html' | relative_url }})
+* [Handout 1: Three-Point Difference Method](handout1)
+* [Handout 2: Numerical Methods](handout2)
+* [Handout 3: Differential Equations](handout3)
+* [Handout 4: Implementation Guide](handout4)
+* [Handout 5: Analysis Techniques](handout5)
+* [Handout 6: Final Project Guidelines](handout6)
 
 <style>
 .handout-list {
