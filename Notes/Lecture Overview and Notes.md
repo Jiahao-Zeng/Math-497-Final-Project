@@ -6,9 +6,11 @@ use_math: true
 ---
 
 ##### First Derivative Approximation
+
 $$
 \text{First derivatve: }f'(a) = \lim_{ h \to 0 } \frac{f(a=h)-f(a)}{h}
 $$
+
 $$
 \text{Slope: } \frac{f(a+h-f(a))}{a+h-a}
 $$
@@ -24,12 +26,15 @@ $$
 f'(a) \approx \frac{f(a) - f(a-h)}{h}
 $$
 ##### 3. Centered difference: 
+
 $$
 f'(a) \approx \frac{f(a+h)-f(a-h)}{2h}
 $$
+
 Example 1:
 - For h =1 and h =0.1, approximate f'(1) with f(x)= $x^3$ using forward, backward, and centered difference methods.
-- Forward: 
+- Forward:
+
 $$
 \begin{align}
 h &= 1 \\
@@ -44,6 +49,7 @@ a &=1 \\
 \text{Centered Difference: }\frac{f(2)-f(0.9)}{0.2} &= 3.01
 \end{align}
 $$
+
 - Finding the error
 $$
 \begin{align}
