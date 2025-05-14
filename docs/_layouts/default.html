@@ -205,12 +205,12 @@
                     {% elsif page.layout == 'handouts' %}
                         <li><a href="{{ '/' | relative_url }}" class="button">Back to Main</a></li>
                     {% else %}
-                        <li><a href="#intro" class="button">Home</a></li>
+                        <li><a href="{{ '/' | relative_url }}" class="button">Home</a></li>
                         <li><a href="{{ '/handouts/' | relative_url }}" class="button">Handouts</a></li>
-                        <li><a href="#phase1" class="button">Phase I</a></li>
-                        <li><a href="#phase2" class="button">Phase II</a></li>
-                        <li><a href="#phase3" class="button">Phase III</a></li>
-                        <li><a href="#docs" class="button">Documentation</a></li>
+                        <li><a href="{{ '/phase1' | relative_url }}" class="button">Phase I</a></li>
+                        <li><a href="{{ '/phase2' | relative_url }}" class="button">Phase II</a></li>
+                        <li><a href="{{ '/phase3' | relative_url }}" class="button">Phase III</a></li>
+                        <li><a href="{{ '/about' | relative_url }}" class="button">About</a></li>
                     {% endif %}
                 </ul>
             </nav>
