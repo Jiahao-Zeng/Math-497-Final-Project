@@ -25,59 +25,72 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#phase1">Phase I</a></li>
-                    <li><a href="#phase2">Phase II</a></li>
-                    <li><a href="#phase3">Phase III</a></li>
-                    <li><a href="#docs">Documentation</a></li>
+                    {% if page.layout == 'handouts' %}
+                        <li><a href="{{ '/' | relative_url }}">Back to Main</a></li>
+                    {% else %}
+                        <li><a href="#intro">Home</a></li>
+                        <li><a href="{{ '/handouts/' | relative_url }}">Handouts</a></li>
+                        <li><a href="#phase1">Phase I</a></li>
+                        <li><a href="#phase2">Phase II</a></li>
+                        <li><a href="#phase3">Phase III</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </header>
 
         <!-- Main -->
         <div id="main">
-            <!-- Intro -->
-            <article id="intro">
-                <h2 class="major">Home</h2>
+            {% if page.layout == 'handouts' %}
                 {{ content }}
-            </article>
+            {% else %}
+                <!-- Intro -->
+                <article id="intro">
+                    <h2 class="major">Home</h2>
+                    {{ content }}
+                </article>
 
-            <!-- Phase I -->
-            <article id="phase1">
-                <h2 class="major">Phase I</h2>
-                <p>Project setup and initial implementation.</p>
-                <a href="{{ site.github.repository_url }}/tree/main/Phase%20I" class="button">View Phase I</a>
-            </article>
+                <!-- Phase I -->
+                <article id="phase1">
+                    <h2 class="major">Phase I</h2>
+                    <p>Project setup and initial implementation.</p>
+                    <a href="{{ site.github.repository_url }}/tree/main/Phase%20I" class="button">View Phase I</a>
+                </article>
 
-            <!-- Phase II -->
-            <article id="phase2">
-                <h2 class="major">Phase II</h2>
-                <p>Core implementation and development.</p>
-                <a href="{{ site.github.repository_url }}/tree/main/Phase%20II" class="button">View Phase II</a>
-            </article>
+                <!-- Phase II -->
+                <article id="phase2">
+                    <h2 class="major">Phase II</h2>
+                    <p>Core implementation and development.</p>
+                    <a href="{{ site.github.repository_url }}/tree/main/Phase%20II" class="button">View Phase II</a>
+                </article>
 
-            <!-- Phase III -->
-            <article id="phase3">
-                <h2 class="major">Phase III</h2>
-                <p>Final implementation and results.</p>
-                <a href="{{ site.github.repository_url }}/tree/main/Phase%20III" class="button">View Phase III</a>
-            </article>
+                <!-- Phase III -->
+                <article id="phase3">
+                    <h2 class="major">Phase III</h2>
+                    <p>Final implementation and results.</p>
+                    <a href="{{ site.github.repository_url }}/tree/main/Phase%20III" class="button">View Phase III</a>
+                </article>
 
-            <!-- Documentation -->
-            <article id="docs">
-                <h2 class="major">Documentation</h2>
-                <p>Project documentation and resources.</p>
-                <ul>
-                    <li><a href="{{ site.github.repository_url }}/blob/main/README.md">Getting Started</a></li>
-                    <li><a href="{{ site.github.repository_url }}/tree/main/docs/handouts">Project Handouts</a></li>
-                    <li><a href="{{ site.github.repository_url }}">GitHub Repository</a></li>
-                </ul>
-            </article>
+                <!-- Documentation -->
+                <article id="docs">
+                    <h2 class="major">Documentation</h2>
+                    <p>Project documentation and resources.</p>
+                    <ul>
+                        <li><a href="{{ site.github.repository_url }}/blob/main/README.md">Getting Started</a></li>
+                        <li><a href="{{ site.github.repository_url }}/tree/main/docs/handouts">Project Handouts</a></li>
+                        <li><a href="{{ site.github.repository_url }}">GitHub Repository</a></li>
+                    </ul>
+                </article>
+            {% endif %}
         </div>
 
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; {{ site.time | date: '%Y' }} Math 497 Final Project. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p class="copyright">
+                &copy; {{ site.time | date: '%Y' }} Math 497 Final Project.<br>
+                Design: <a href="https://html5up.net/dimension">Dimension</a> by <a href="https://html5up.net">HTML5 UP</a> | <a href="https://twitter.com/ajlkn">@ajlkn</a><br>
+                Licensed under <a href="https://html5up.net/license">Creative Commons Attribution 3.0</a>
+            </p>
         </footer>
 
     </div>
