@@ -22,4 +22,4 @@ The velocity and final time values for your projects are selected as follows:
 4. $\bar{v} = 1.5$, $T = \frac{3}{2}$, $\Delta t = 0.8 \Delta x \frac{1}{\bar{v}} \left( \frac{2 - \gamma}{2 + \gamma} \right)$; Team 5
 5. $\bar{v} = 1.75$, $T = \frac{7}{4}$, $\Delta t = 0.8 \Delta x \frac{1}{\bar{v}} \left( \frac{2 - \gamma}{2 + \gamma} \right)$; Team 1
 ___
-If you want to follow along/try this yourself, check the [handouts](./Handouts). 
+If you want to follow along/try this yourself, check the [handouts](/handouts/). 

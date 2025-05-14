@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Phase II
+permalink: /phase2/
 ---
 
 <article id="phase2" class="active">

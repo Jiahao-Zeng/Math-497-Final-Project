@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Phase III
+permalink: /phase3/
 ---
 
 <article id="phase3" class="active">
