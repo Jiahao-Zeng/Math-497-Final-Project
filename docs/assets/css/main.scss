@@ -1,1 +1,47 @@
 @import "style"; 
+
+/* Article Layout */
+.is-article-layout {
+    #main {
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(27, 31, 34, 0.85);
+            border-radius: 4px;
+            
+            h1, h2, h3, h4, h5, h6 {
+                color: #ffffff;
+                margin: 0 0 1rem 0;
+                line-height: 1.5;
+            }
+            
+            p {
+                margin: 0 0 1.5rem 0;
+                line-height: 1.6;
+            }
+            
+            ul, ol {
+                margin: 0 0 1.5rem 2rem;
+                
+                li {
+                    margin-bottom: 0.5rem;
+                }
+            }
+            
+            code {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 3px;
+                padding: 0.2rem 0.4rem;
+            }
+            
+            pre {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                padding: 1rem;
+                overflow-x: auto;
+                margin: 0 0 1.5rem 0;
+            }
+        }
+    }
+} 

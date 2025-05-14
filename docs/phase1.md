@@ -1,85 +1,31 @@
 ---
-layout: default
-title: Phase I
+layout: article
+title: Phase 1
 permalink: /phase1/
+use_math: true
 ---
 
-<article id="phase1" class="active">
-    <h2 class="major">Phase I: Initial Implementation</h2>
-    
-    <div class="phase-content">
-        <h3>Overview</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-        </p>
+## Overview
 
-        <h3>Implementation Details</h3>
-        <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
 
-        <h3>Key Components</h3>
-        <ul>
-            <li>Lorem ipsum dolor sit amet</li>
-            <li>Consectetur adipiscing elit</li>
-            <li>Sed do eiusmod tempor</li>
-            <li>Ut labore et dolore magna</li>
-        </ul>
+## Implementation Details
 
-        <h3>Results and Analysis</h3>
-        <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-        <div class="next-steps" style="margin-top: 2rem; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 4px;">
-            <h4>Next Steps</h4>
-            <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="{{ '/phase2' | relative_url }}" class="button">Continue to Phase II &rarr;</a>
-        </div>
-    </div>
-</article>
+## Key Components
 
-<style>
-.phase-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-}
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Sed do eiusmod tempor
+- Ut labore et dolore magna
 
-.phase-content h2 {
-    color: #ffffff;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
+## Results and Analysis
 
-.phase-content h3 {
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem;
-}
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-.phase-content p {
-    margin: 1rem 0;
-    line-height: 1.6;
-}
+## Next Steps
 
-.phase-content ul {
-    list-style: disc;
-    margin-left: 2rem;
-}
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-.phase-content pre {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 4px;
-    overflow-x: auto;
-    margin: 1rem 0;
-}
-
-.phase-content code {
-    font-family: monospace;
-    font-size: 0.9rem;
-}
-</style> 
+[Continue to Phase 2 →]({{ '/phase2' | relative_url }}) 
