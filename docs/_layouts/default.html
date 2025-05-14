@@ -97,9 +97,22 @@
             opacity: 1;
             visibility: visible;
         }
+        /* Add styles for handout pages */
+        body.is-handout #main {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        body.is-handout #main article {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+        body.is-handout .handout-content {
+            padding: 2rem;
+        }
     </style>
 </head>
-<body class="is-preload">
+<body class="is-preload {% if page.layout == 'handout' %}is-handout{% endif %}">
 
     <!-- Wrapper -->
     <div id="wrapper">
