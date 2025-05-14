@@ -10,22 +10,18 @@
         nav ul {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 0;
+            gap: 1px;
             width: 100%;
             padding: 0;
             margin: 0;
             list-style: none;
             position: relative;
             z-index: 2;
+            background: rgba(255, 255, 255, 0.15);
         }
         nav ul li {
             text-align: center;
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
-            position: relative;
             background: #1b1f22;
-        }
-        nav ul li:first-child {
-            border-left: none;
         }
         nav ul li a {
             width: 100%;
@@ -46,55 +42,42 @@
         nav ul li a:hover {
             background: rgba(255, 255, 255, 0.075);
         }
-        #header nav:after {
+        #header nav {
+            position: relative;
+        }
+        #header nav:before {
             content: '';
             display: block;
             position: absolute;
             top: -3rem;
-            left: calc(50% - 1px);
+            left: 50%;
             width: 1px;
             height: 3rem;
-            background: #ffffff;
-            opacity: 0.25;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        #header nav:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -3rem;
+            left: 50%;
+            width: 1px;
+            height: 3rem;
+            background: rgba(255, 255, 255, 0.15);
         }
         @media screen and (max-width: 980px) {
             nav ul {
                 grid-template-columns: repeat(3, 1fr);
-            }
-            nav ul li:nth-child(3n+1) {
-                border-left: none;
-            }
-            nav ul li {
-                border-top: 1px solid rgba(255, 255, 255, 0.15);
-            }
-            nav ul li:nth-child(-n+3) {
-                border-top: none;
             }
         }
         @media screen and (max-width: 736px) {
             nav ul {
                 grid-template-columns: repeat(2, 1fr);
             }
-            nav ul li:nth-child(2n+1) {
-                border-left: none;
-            }
-            nav ul li {
-                border-top: 1px solid rgba(255, 255, 255, 0.15);
-            }
-            nav ul li:nth-child(-n+2) {
-                border-top: none;
-            }
         }
         @media screen and (max-width: 480px) {
             nav ul {
                 grid-template-columns: 1fr;
-            }
-            nav ul li {
-                border-left: none;
-                border-top: 1px solid rgba(255, 255, 255, 0.15);
-            }
-            nav ul li:first-child {
-                border-top: none;
             }
         }
         #main article.active {
