@@ -1,26 +1,35 @@
----
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>{{ page.title }} – {{ site.title }}</title>
-
-  {{ content_for_header }}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Math 497 Final Project</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="{{ "/" | relative_url }}">Home</a></li>
-        <li><a href="{{ "/about/" | relative_url }}">About</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="wrapper">
+        <header>
+            <h1>Math 497 Final Project</h1>
+            <p>Mathematical Modeling and Analysis</p>
+            
+            <nav class="main-nav">
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/about/' | relative_url }}">About</a>
+                <a href="{{ '/handouts/' | relative_url }}">Handouts</a>
+                <a href="{{ site.github.repository_url }}" target="_blank">View on GitHub</a>
+            </nav>
+        </header>
 
-  <main>
-    {{ content }}
-  </main>
+        <main class="content">
+            {{ content }}
+        </main>
+
+        <footer>
+            <p>&copy; {{ site.time | date: '%Y' }} - Math 497 Final Project</p>
+        </footer>
+    </div>
 </body>
 </html>
