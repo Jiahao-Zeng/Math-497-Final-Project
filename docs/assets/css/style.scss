@@ -16,6 +16,8 @@
   --code-bg: #f8f9fa;
   --nav-button-bg: rgba(255, 255, 255, 0.1);
   --nav-button-hover: rgba(255, 255, 255, 0.2);
+  --toggle-button-bg: #ffffff;
+  --toggle-button-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 // Dark mode colors
@@ -31,34 +33,53 @@
   --code-bg: #2d2d2d;
   --nav-button-bg: rgba(255, 255, 255, 0.05);
   --nav-button-hover: rgba(255, 255, 255, 0.1);
+  --toggle-button-bg: #2d2d2d;
+  --toggle-button-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 
 // Theme toggle button
 .theme-toggle {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 20px;
+  right: 20px;
   z-index: 1000;
-  background: var(--card-bg);
-  border: none;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  padding: 0;
+  border: 2px solid var(--text-color);
+  background: var(--toggle-button-bg);
+  color: var(--text-color);
   cursor: pointer;
+  box-shadow: var(--toggle-button-shadow);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
   
   &:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
   
-  svg {
-    width: 1.2rem;
-    height: 1.2rem;
-    fill: var(--text-color);
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--secondary-color);
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    transition: transform 0.5s ease;
+    
+    &.sun {
+      transform: rotate(0deg);
+    }
+    
+    &.moon {
+      transform: rotate(-90deg);
+    }
   }
 }
 
