@@ -3,7 +3,90 @@ layout: default
 ---
 
 <article id="handouts" class="active">
-    {{ content }}
+    <h1>Math 497 - Course Materials</h1>
+    <p>Mathematical Methods and Project Documentation</p>
+
+    <div class="handout-nav">
+        <a href="{{ '/' | relative_url }}" class="button special">&larr; Back to Main</a>
+    </div>
+
+    <div class="intro-section" style="margin: 3rem 0; text-align: left;">
+        <h2>Welcome to the Course Materials</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim.
+        </p>
+        <p>
+            Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus:
+        </p>
+        <ul style="list-style: disc; margin-left: 2rem;">
+            <li>Comprehensive mathematical foundations</li>
+            <li>Practical implementation examples</li>
+            <li>Step-by-step problem solutions</li>
+            <li>Detailed theoretical explanations</li>
+        </ul>
+    </div>
+
+    <h2>Available Handouts</h2>
+
+    <div class="handout-grid">
+        <a href="{{ '/handouts/handout1' | relative_url }}" class="handout-card">
+            <div class="handout-content">
+                <h3>Handout 1: Three-Point Difference Method</h3>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui.</p>
+                <span class="read-more">Read More &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="{{ '/handouts/handout2' | relative_url }}" class="handout-card">
+            <div class="handout-content">
+                <h3>Handout 2: Numerical Methods</h3>
+                <p>Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna.</p>
+                <span class="read-more">Read More &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="{{ '/handouts/handout3' | relative_url }}" class="handout-card">
+            <div class="handout-content">
+                <h3>Handout 3: Differential Equations</h3>
+                <p>Nam vestibulum accumsan nisl. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.</p>
+                <span class="read-more">Read More &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="{{ '/handouts/handout4' | relative_url }}" class="handout-card">
+            <div class="handout-content">
+                <h3>Handout 4: Implementation Guide</h3>
+                <p>Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus.</p>
+                <span class="read-more">Read More &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="{{ '/handouts/handout5' | relative_url }}" class="handout-card">
+            <div class="handout-content">
+                <h3>Handout 5: Analysis Techniques</h3>
+                <p>Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget.</p>
+                <span class="read-more">Read More &rarr;</span>
+            </div>
+        </a>
+        
+        <a href="{{ '/handouts/handout6' | relative_url }}" class="handout-card">
+            <div class="handout-content">
+                <h3>Handout 6: Final Project Guidelines</h3>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit.</p>
+                <span class="read-more">Read More &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="additional-info" style="margin-top: 3rem; padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 4px;">
+        <h3>Additional Resources</h3>
+        <p>
+            Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor.
+        </p>
+        <p>
+            Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue.
+        </p>
+    </div>
 </article>
 
 <style>
@@ -11,11 +94,13 @@ article.active {
     opacity: 1 !important;
     visibility: visible !important;
 }
+
 #handouts {
     text-align: left;
     max-width: 100%;
     padding: 2.5rem 2.5rem;
 }
+
 #handouts h1 {
     font-size: 2.25rem;
     line-height: 1.3;
@@ -24,6 +109,7 @@ article.active {
     margin: 0 0 1rem 0;
     text-align: center;
 }
+
 #handouts p {
     font-size: 1rem;
     letter-spacing: 0.2rem;
@@ -31,6 +117,7 @@ article.active {
     margin: 0 0 2rem 0;
     text-align: center;
 }
+
 #handouts h2 {
     font-size: 1.5rem;
     line-height: 1.4;
@@ -39,42 +126,56 @@ article.active {
     margin: 2rem 0 1.5rem 0;
 }
 
-.handout-list {
+.handout-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
-.handout-item {
+.handout-card {
     background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
     padding: 1.5rem;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.handout-item:hover {
+.handout-card:hover {
     background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-.handout-item h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.25em;
-}
-
-.handout-item h3 a {
+.handout-content h3 {
     color: #ffffff;
-    text-decoration: none;
-    border: none;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
 }
 
-.handout-item p {
-    margin: 0;
-    font-size: 0.9em;
-    opacity: 0.7;
+.handout-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
     text-transform: none !important;
     letter-spacing: normal !important;
     text-align: left !important;
+}
+
+.read-more {
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.handout-card:hover .read-more {
+    opacity: 1;
 }
 
 .handout-nav {
@@ -88,7 +189,7 @@ article.active {
 }
 
 @media screen and (max-width: 736px) {
-    .handout-list {
+    .handout-grid {
         grid-template-columns: 1fr;
     }
 }
