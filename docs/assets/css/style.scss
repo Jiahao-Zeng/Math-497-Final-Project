@@ -16,8 +16,10 @@
   --code-bg: #f8f9fa;
   --nav-button-bg: rgba(255, 255, 255, 0.1);
   --nav-button-hover: rgba(255, 255, 255, 0.2);
-  --toggle-button-bg: #ffffff;
-  --toggle-button-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  --toggle-bg: #f0f0f0;
+  --toggle-circle: #fff;
+  --sidebar-bg: #fff;
+  --sidebar-text: #333;
 }
 
 // Dark mode colors
@@ -33,53 +35,149 @@
   --code-bg: #2d2d2d;
   --nav-button-bg: rgba(255, 255, 255, 0.05);
   --nav-button-hover: rgba(255, 255, 255, 0.1);
-  --toggle-button-bg: #2d2d2d;
-  --toggle-button-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  --toggle-bg: #333;
+  --toggle-circle: #fff;
+  --sidebar-bg: #1a1a1a;
+  --sidebar-text: #fff;
 }
 
-// Theme toggle button
+// Hamburger Menu
+.hamburger-menu {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+}
+
+// Sidebar
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 999;
+  padding: 4rem 1rem 1rem;
+  overflow-y: auto;
+
+  &.open {
+    left: 0;
+  }
+
+  .sidebar-section {
+    margin-bottom: 2rem;
+    color: var(--sidebar-text);
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--text-color);
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Theme toggle switch
 .theme-toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1rem;
+  right: 1rem;
   z-index: 1000;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  padding: 0;
-  border: 2px solid var(--text-color);
-  background: var(--toggle-button-bg);
-  color: var(--text-color);
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: var(--toggle-bg);
   cursor: pointer;
-  box-shadow: var(--toggle-button-shadow);
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  }
-  
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px var(--secondary-color);
+  padding: 4px;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--toggle-circle);
+    transition: transform 0.3s ease;
   }
 
   .icon {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-    transition: transform 0.5s ease;
-    
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    transition: opacity 0.3s ease;
+
     &.sun {
-      transform: rotate(0deg);
+      left: 8px;
+      opacity: 1;
     }
-    
+
     &.moon {
-      transform: rotate(-90deg);
+      right: 8px;
+      opacity: 0;
     }
+  }
+}
+
+[data-theme="dark"] .theme-toggle {
+  &::before {
+    transform: translateX(30px);
+  }
+
+  .icon.sun {
+    opacity: 0;
+  }
+
+  .icon.moon {
+    opacity: 1;
+  }
+}
+
+// Overlay
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 998;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
