@@ -15,6 +15,12 @@ sass:
   style: compressed
   sass_dir: assets/css
 
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
 defaults:
   - scope:
       path: ""
@@ -26,3 +32,9 @@ defaults:
       type: "pages"
     values:
       layout: handout
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
