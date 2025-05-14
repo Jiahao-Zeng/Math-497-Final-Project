@@ -1,11 +1,9 @@
-
 ---
 layout: article
-title: name here
-permalink: /Lecture Notes & Overview/
+title: Notes
+permalink: /Lecture Notes/
 use_math: true
 ---
-
 
 ##### First Derivative Approximation
 $$
