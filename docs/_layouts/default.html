@@ -110,6 +110,36 @@
         body.is-handout .handout-content {
             padding: 2rem;
         }
+        /* Force visibility for handout content */
+        body.is-handout #main,
+        body.is-handout #main article,
+        body.is-handout .handout-content {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+        }
+        
+        body.is-handout #header {
+            transform: none !important;
+            filter: none !important;
+            opacity: 1 !important;
+        }
+
+        /* Ensure proper article visibility */
+        #main article.active {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+        }
+
+        /* Override template's default hiding behavior */
+        body.is-article-visible #main,
+        body.is-article-visible #main article {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
     </style>
 </head>
 <body class="is-preload {% if page.layout == 'handout' %}is-handout{% endif %}">

@@ -48,7 +48,25 @@ layout: default
     background: rgba(255, 255, 255, 0.1);
 }
 article.active {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    transform: none !important;
+}
+#main {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+.handout-content {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+body.is-article-visible #main,
+body.is-article-visible #main article {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
 }
 </style> 

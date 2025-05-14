@@ -8,8 +8,8 @@ layout: default
 
 <style>
 article.active {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 #handouts {
     text-align: left;
@@ -38,24 +38,58 @@ article.active {
     text-transform: uppercase;
     margin: 2rem 0 1.5rem 0;
 }
-#handouts ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2rem 0;
+
+.handout-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
-#handouts ul li {
-    padding: 0.5rem 0;
-    border-top: solid 1px rgba(255, 255, 255, 0.15);
+
+.handout-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
-#handouts ul li:first-child {
-    border-top: none;
+
+.handout-item:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
-#handouts ul li a {
+
+.handout-item h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25em;
+}
+
+.handout-item h3 a {
     color: #ffffff;
     text-decoration: none;
-    border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
+    border: none;
 }
-#handouts ul li a:hover {
-    border-bottom-color: transparent;
+
+.handout-item p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.7;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    text-align: left !important;
+}
+
+.handout-nav {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.handout-nav a {
+    border: none;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 736px) {
+    .handout-list {
+        grid-template-columns: 1fr;
+    }
 }
 </style> 
