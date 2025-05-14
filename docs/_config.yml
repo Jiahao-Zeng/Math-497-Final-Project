@@ -1,6 +1,7 @@
 url: "https://jiahao-zeng.github.io"
 baseurl: "/Math-497-Final-Project"
-theme: jekyll-theme-minimal
+title: "Math 497 Final Project"
+description: "Mathematical Modeling and Analysis"
 markdown: kramdown
 
 kramdown: 
@@ -10,9 +11,13 @@ kramdown:
   math_engine_opts:
     preview: false
 
+sass:
+  style: compressed
+  sass_dir: assets/css
+
 defaults:
   - scope:
-      path: "Handouts"
+      path: ""
       type: "pages"
     values: 
       layout: default
