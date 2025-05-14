@@ -3,39 +3,16 @@ layout: handouts
 title: Course Handouts
 ---
 
-<h2 class="major">Course Handouts</h2>
+# Course Handouts
 
-<div class="handout-list">
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout1.html' | relative_url }}">Handout 1: Three-Point Difference Method</a></h3>
-        <p>Learn about the three-point difference method for approximating derivatives.</p>
-    </div>
+Access all course materials and handouts below:
 
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout2.html' | relative_url }}">Handout 2: Numerical Methods</a></h3>
-        <p>Explore second derivative approximations and differential equations.</p>
-    </div>
-
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout3.html' | relative_url }}">Handout 3: Differential Equations</a></h3>
-        <p>Study the traffic flow model and density calculations.</p>
-    </div>
-
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout4.html' | relative_url }}">Handout 4: Implementation Guide</a></h3>
-        <p>Learn about density computations and the upwind scheme.</p>
-    </div>
-
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout5.html' | relative_url }}">Handout 5: Analysis Techniques</a></h3>
-        <p>Advanced analysis of the upwind scheme and error calculations.</p>
-    </div>
-
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout6.html' | relative_url }}">Handout 6: Final Project Guidelines</a></h3>
-        <p>Final project requirements and traffic flow model implementation.</p>
-    </div>
-</div>
+* [Handout 1: Three-Point Difference Method]({{ '/handouts/handout1.html' | relative_url }})
+* [Handout 2: Numerical Methods]({{ '/handouts/handout2.html' | relative_url }})
+* [Handout 3: Differential Equations]({{ '/handouts/handout3.html' | relative_url }})
+* [Handout 4: Implementation Guide]({{ '/handouts/handout4.html' | relative_url }})
+* [Handout 5: Analysis Techniques]({{ '/handouts/handout5.html' | relative_url }})
+* [Handout 6: Final Project Guidelines]({{ '/handouts/handout6.html' | relative_url }})
 
 <style>
 .handout-list {
