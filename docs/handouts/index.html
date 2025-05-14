@@ -29,32 +29,112 @@ permalink: /handouts/
 
 <h2>Available Handouts</h2>
 
-<div class="handout-list">
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout1' | relative_url }}">Handout 1: Three-Point Difference Method</a></h3>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor.</p>
-    </div>
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout2' | relative_url }}">Handout 2: Numerical Methods</a></h3>
-        <p>Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus.</p>
-    </div>
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout3' | relative_url }}">Handout 3: Differential Equations</a></h3>
-        <p>Nam vestibulum accumsan nisl. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Ut lectus.</p>
-    </div>
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout4' | relative_url }}">Handout 4: Implementation Guide</a></h3>
-        <p>Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.</p>
-    </div>
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout5' | relative_url }}">Handout 5: Analysis Techniques</a></h3>
-        <p>Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam.</p>
-    </div>
-    <div class="handout-item">
-        <h3><a href="{{ '/handouts/handout6' | relative_url }}">Handout 6: Final Project Guidelines</a></h3>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque.</p>
-    </div>
+<div class="handout-grid">
+    <a href="{{ '/handouts/handout1' | relative_url }}" class="handout-card">
+        <div class="handout-content">
+            <h3>Handout 1: Three-Point Difference Method</h3>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui.</p>
+            <span class="read-more">Read More &rarr;</span>
+        </div>
+    </a>
+    
+    <a href="{{ '/handouts/handout2' | relative_url }}" class="handout-card">
+        <div class="handout-content">
+            <h3>Handout 2: Numerical Methods</h3>
+            <p>Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna.</p>
+            <span class="read-more">Read More &rarr;</span>
+        </div>
+    </a>
+    
+    <a href="{{ '/handouts/handout3' | relative_url }}" class="handout-card">
+        <div class="handout-content">
+            <h3>Handout 3: Differential Equations</h3>
+            <p>Nam vestibulum accumsan nisl. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.</p>
+            <span class="read-more">Read More &rarr;</span>
+        </div>
+    </a>
+    
+    <a href="{{ '/handouts/handout4' | relative_url }}" class="handout-card">
+        <div class="handout-content">
+            <h3>Handout 4: Implementation Guide</h3>
+            <p>Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus.</p>
+            <span class="read-more">Read More &rarr;</span>
+        </div>
+    </a>
+    
+    <a href="{{ '/handouts/handout5' | relative_url }}" class="handout-card">
+        <div class="handout-content">
+            <h3>Handout 5: Analysis Techniques</h3>
+            <p>Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget.</p>
+            <span class="read-more">Read More &rarr;</span>
+        </div>
+    </a>
+    
+    <a href="{{ '/handouts/handout6' | relative_url }}" class="handout-card">
+        <div class="handout-content">
+            <h3>Handout 6: Final Project Guidelines</h3>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit.</p>
+            <span class="read-more">Read More &rarr;</span>
+        </div>
+    </a>
 </div>
+
+<style>
+.handout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.handout-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.handout-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.handout-content h3 {
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.handout-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.read-more {
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.handout-card:hover .read-more {
+    opacity: 1;
+}
+
+@media screen and (max-width: 736px) {
+    .handout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 
 <div class="additional-info" style="margin-top: 3rem; padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 4px;">
     <h3>Additional Resources</h3>
