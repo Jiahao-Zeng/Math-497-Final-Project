@@ -20,6 +20,7 @@ plugins:
   - jekyll-optional-front-matter
   - jekyll-default-layout
   - jekyll-titles-from-headings
+  - jekyll-redirect-from
 
 defaults:
   - scope:

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Documentation
-permalink: /documentation/
+title: Math 497 Final Project
+permalink: /
 ---
 
 # Welcome to Math 497 Final Project
