@@ -1,167 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <button class="hamburger-menu" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <div class="sidebar">
-        <div class="sidebar-section">
-            <h3>Section 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="{{ '/' | relative_url }}">
+                <span class="site-title">Math 497 Final Project</span>
+            </a>
         </div>
-        <div class="sidebar-section">
-            <h3>Section 2</h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="sidebar-section">
-            <h3>Section 3</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-        <div class="sidebar-section">
-            <h3>Section 4</h3>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-    </div>
 
-    <div class="overlay"></div>
+        <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
 
-    <button class="theme-toggle" aria-label="Toggle dark mode">
-        <svg class="icon sun" viewBox="0 0 24 24">
-            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
-        </svg>
-        <svg class="icon moon" viewBox="0 0 24 24" style="display: none;">
-            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
-        </svg>
-    </button>
+        <nav class="main-nav">
+            <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+            <a href="{{ '/handouts/' | relative_url }}" {% if page.url contains '/handouts/' %}class="active"{% endif %}>Handouts</a>
+            <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active"{% endif %}>About</a>
+        </nav>
 
-    <header>
-        <div class="header-content">
-            <h1>Math 497 Final Project</h1>
-            <p>Mathematical Modeling and Analysis</p>
-            
-            <nav class="main-nav">
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="{{ '/about/' | relative_url }}">About</a>
-                <a href="{{ '/handouts/' | relative_url }}">Handouts</a>
-                <a href="{{ site.github.repository_url }}" target="_blank">View on GitHub</a>
-            </nav>
+        <div class="cta-buttons">
+            <a href="{{ '/getting-started/' | relative_url }}" class="cta-button primary">Get Started</a>
+            <a href="https://github.com/jiahao-zeng/Math-497-Final-Project" class="cta-button secondary" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
         </div>
     </header>
 
-    <div class="wrapper">
-        <main class="content">
-            {{ content }}
-        </main>
+    <aside class="sidebar">
+        <div class="sidebar-section">
+            <h3>Project Phases</h3>
+            <ul>
+                <li><a href="{{ '/Phase I/' | relative_url }}">Phase I: Project Setup</a></li>
+                <li><a href="{{ '/Phase II/' | relative_url }}">Phase II: Implementation</a></li>
+                <li><a href="{{ '/Phase III/' | relative_url }}">Phase III: Results</a></li>
+            </ul>
+        </div>
 
-        <footer>
-            <p>&copy; {{ site.time | date: '%Y' }} - Math 497 Final Project</p>
-        </footer>
-    </div>
+        <div class="sidebar-section">
+            <h3>Documentation</h3>
+            <ul>
+                <li><a href="{{ '/getting-started/' | relative_url }}">Getting Started</a></li>
+                <li><a href="{{ '/handouts/' | relative_url }}">Project Handouts</a></li>
+                <li><a href="{{ '/about/' | relative_url }}">About the Project</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="{{ '/resources/papers/' | relative_url }}">Research Papers</a></li>
+                <li><a href="{{ '/resources/code/' | relative_url }}">Code Samples</a></li>
+                <li><a href="{{ '/resources/links/' | relative_url }}">External Links</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
+                <a href="{{ '/terms/' | relative_url }}">Terms of Use</a>
+                <a href="mailto:contact@example.com">Contact</a>
+            </div>
+            <p>&copy; {{ site.time | date: '%Y' }} Math 497 Final Project. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Theme Toggle
-            const themeToggle = document.querySelector('.theme-toggle');
-            const sunIcon = document.querySelector('.icon.sun');
-            const moonIcon = document.querySelector('.icon.moon');
-            const html = document.documentElement;
-            
-            // Hamburger Menu
-            const hamburger = document.querySelector('.hamburger-menu');
-            const sidebar = document.querySelector('.sidebar');
-            const overlay = document.querySelector('.overlay');
-            
-            // Function to update theme
-            function setTheme(theme) {
-                html.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-                
-                // Update icon visibility
-                if (theme === 'dark') {
-                    sunIcon.style.display = 'none';
-                    moonIcon.style.display = 'block';
-                } else {
-                    sunIcon.style.display = 'block';
-                    moonIcon.style.display = 'none';
-                }
-            }
-            
-            // Function to toggle sidebar
-            function toggleSidebar() {
-                sidebar.classList.toggle('open');
-                overlay.classList.toggle('active');
-                
-                // Animate hamburger icon
-                const spans = hamburger.querySelectorAll('span');
-                spans.forEach((span, index) => {
-                    span.style.transition = 'transform 0.3s ease';
-                    if (sidebar.classList.contains('open')) {
-                        switch(index) {
-                            case 0:
-                                span.style.transform = 'rotate(45deg) translate(5px, 5px)';
-                                break;
-                            case 1:
-                                span.style.opacity = '0';
-                                break;
-                            case 2:
-                                span.style.transform = 'rotate(-45deg) translate(7px, -7px)';
-                                break;
-                        }
-                    } else {
-                        span.style.transform = 'none';
-                        span.style.opacity = '1';
-                    }
-                });
-            }
-            
-            // Check for saved theme preference
-            const savedTheme = localStorage.getItem('theme');
-            
-            if (savedTheme) {
-                setTheme(savedTheme);
-            } else {
-                // Check system preference
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                setTheme(prefersDark ? 'dark' : 'light');
-            }
-            
-            // Toggle theme on button click
-            themeToggle.addEventListener('click', () => {
-                const currentTheme = html.getAttribute('data-theme');
-                setTheme(currentTheme === 'light' ? 'dark' : 'light');
-            });
-            
-            // Toggle sidebar on hamburger click
-            hamburger.addEventListener('click', toggleSidebar);
-            
-            // Close sidebar when clicking overlay
-            overlay.addEventListener('click', toggleSidebar);
-            
-            // Listen for system theme changes
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                if (!localStorage.getItem('theme')) {
-                    setTheme(e.matches ? 'dark' : 'light');
-                }
-            });
-            
-            // Close sidebar on escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && sidebar.classList.contains('open')) {
-                    toggleSidebar();
-                }
-            });
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('show');
+            document.querySelector('.sidebar').classList.toggle('show');
         });
     </script>
 </body>
