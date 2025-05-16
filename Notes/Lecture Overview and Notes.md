@@ -8,7 +8,7 @@ use_math: true
 ##### First Derivative Approximation
 
 $$
-\text{First derivatve: }f'(a) = \lim_{ h \to 0 } \frac{f(a=h)-f(a)}{h}
+\text{First derivatve: }f'(a) = \lim_{ h \to 0 } \frac{f(a+h)-f(a)}{h}
 $$
 
 $$
