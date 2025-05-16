@@ -105,6 +105,73 @@ $$
 
 ## Next Steps
 
-Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+---
+
+### 1. Compare Filtered vs Upwind Across Multiple $\Delta x$ and $\gamma$
+
+- Build on Phase 2's filtered scheme evaluation by **quantifying convergence** more formally:
+  - Vary $\Delta x$ from $2^{-4}$ to $2^{-8}$
+  - Compare performance for $\gamma = 0$ (upwind) and $\gamma = 1.75$ (filtered)
+- Use consistent time $t = 0.4$ to compute error and plot:
+  $$
+  \log(\text{Error}) \text{ vs } \log(\Delta x)
+  $$
+- Confirm whether **first-order convergence** is maintained under different $\gamma$ values.
+
+---
+
+### 2. Evaluate Temporal Profiles at Fixed Location
+
+- Extend the temporal comparison at $x = 0.5$ by overlaying:
+  - Upwind scheme
+  - Filtered scheme with multiple $\gamma$ values
+  - Exact solution
+- Analyze how different filters affect:
+  - Arrival time accuracy
+  - Transition sharpness
+  - Oscillatory behavior
+
+---
+
+### 3. Cross-Sectional Accuracy at Fixed Time
+
+- Fix $t = 0.4$ and examine $\rho(x, t)$ across the full domain:
+  - Highlight regions where filtering smooths or sharpens the wavefront
+  - Visually inspect **shock width** and **location of the front**
+
+---
+
+### 4. Introduce Periodic Initial and Boundary Conditions
+
+- Use sinusoidal data:
+  $$
+  \rho(x, 0) = \sin(2\pi x), \quad \rho(0,t) = \rho(1,t)
+  $$
+- Simulate for long durations ($t = 2T,\ 5T,\ 10T$)
+- Evaluate how well each scheme preserves the periodic structure over time:
+  - Identify **phase errors**
+  - Compare wave amplitude and shape retention
+
+---
+
+### 5. Vectorize the Scheme for Efficiency
+
+- Rewrite time-stepping with **NumPy operations**:
+  - Use `np.roll` to shift values for periodic BCs
+  - Replace inner loops with vectorized expressions
+- This will allow simulation for **longer times** and **finer grids** without performance loss
+
+---
+
+### 6. Prepare Visual Assets
+
+- Create standardized plots for:
+  - Solution snapshots
+  - Error convergence
+  - Wave propagation
+- Generate animations for the periodic problem to visualize continuous wave motion under different $\gamma$ values
+
+---
+
 
 [Continue to Phase 3 →]({{ '/phase3' | relative_url }}) 
