@@ -113,7 +113,7 @@ Based on the current implementation comparing the **filtered upwind scheme** to 
 
 ---
 
-### � **5. Enhance visualization and diagnostics**
+### **5. Enhance visualization and diagnostics**
 
 - Animate solution over time to visualize the propagation behavior of each scheme.
 - Use color-coded surface plots for direct comparison.
