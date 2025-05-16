@@ -552,7 +552,7 @@ $$
 \boxed{\rho_t + q_x = 0.}
 $$
 
-- **Linear flux model:** \(q = v\,\rho\) \((v\neq1\text{ constant speed})\)
+- **Linear flux model:** $\(q = v\,\rho\) \((v\neq1\text{ constant speed})\)$
 
 So the PDE becomes
 
