@@ -70,8 +70,6 @@ $$
 
 ## Next Steps
 
-##Next Steps
-
 Based on the current implementation comparing the **filtered upwind scheme** to the **basic upwind method**, here are focused directions for future development:
 
 ---
