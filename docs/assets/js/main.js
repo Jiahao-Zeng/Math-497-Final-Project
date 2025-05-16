@@ -295,7 +295,16 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
-							location.hash = '';
+							// Hide header and content
+							$header.hide();
+							$this.hide();
+							$body.removeClass('is-article-visible');
+							
+							// Show the main navigation after a short delay
+							setTimeout(function() {
+								$header.show();
+								$window.scrollTop(0).triggerHandler('resize.flexbox-fix');
+							}, 325);
 						});
 
 				// Prevent clicks from inside article from bubbling.

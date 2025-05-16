@@ -203,7 +203,7 @@
                     {% if page.layout == 'handout' %}
                         <li><a href="{{ '/handouts/' | relative_url }}" class="button">Back to Handouts</a></li>
                     {% elsif page.layout == 'handouts' %}
-                        <li><a href="https://jiahao-zeng.github.io/Math-497-Final-Project/" class="button">Back to Main</a></li>
+                        <!-- Navigation removed for handouts layout since we have the arrow button in content -->
                     {% else %}
                         <li><a href="https://jiahao-zeng.github.io/Math-497-Final-Project/" class="button">Home</a></li>
                         <li><a href="{{ '/handouts/' | relative_url }}" class="button">Handouts</a></li>
