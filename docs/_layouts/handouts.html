@@ -44,9 +44,10 @@ layout: default
 /* Grid layout for handout cards */
 .handout-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    grid-template-columns: repeat(2, 1fr) !important;  /* Fixed 2 columns */
     gap: 2rem !important;
     margin: 2rem 0 !important;
+    max-width: 100% !important;
 }
 
 .handout-card {
@@ -56,13 +57,22 @@ layout: default
     transition: all 0.3s ease;
     text-decoration: none !important;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 250px !important; /* Fixed height for all cards */
+    width: 100% !important; /* Ensure full width within grid cell */
 }
 
 .handout-card:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
     border-color: rgba(255, 255, 255, 0.2);
+}
+
+.handout-content {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .handout-content h3 {
@@ -73,12 +83,17 @@ layout: default
 
 .handout-content p {
     color: rgba(255, 255, 255, 0.7);
-    margin: 0 0 1rem 0;
+    margin: 0;
     font-size: 0.9rem;
     line-height: 1.5;
     text-transform: none !important;
     letter-spacing: normal !important;
     text-align: left !important;
+    flex: 1 !important;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .read-more {
@@ -89,6 +104,7 @@ layout: default
     display: inline-block;
     opacity: 0.7;
     transition: opacity 0.3s ease;
+    margin-top: auto !important;
 }
 
 .handout-card:hover .read-more {
@@ -107,7 +123,7 @@ layout: default
 
 @media screen and (max-width: 736px) {
     .handout-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;  /* Single column on mobile */
     }
     
     .handouts-content {

@@ -292,7 +292,7 @@
 				var $this = $(this);
 
 				// Close.
-					$('<div class="close">Close</div>')
+					/*$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
 							// Hide header and content
@@ -305,7 +305,7 @@
 								$header.show();
 								$window.scrollTop(0).triggerHandler('resize.flexbox-fix');
 							}, 325);
-						});
+						});*/
 
 				// Prevent clicks from inside article from bubbling.
 					$this.on('click', function(event) {
