@@ -113,7 +113,8 @@ $$
 	- Approximate 1st derivative over x values in the array
 	- FD, BD, CD
 	- Evaluate the error of approximation at any x values in the array -> array of point-wise errors
-	- $$
+
+$$
 \begin{align}
 &f(x) \text{ over } [a,b] \\
 &f_{\text{avg}} =\frac{1}{b-a}\int_{a}^{b} f(x)dx
@@ -137,6 +138,7 @@ $$
 &|\frac{f(x_{i+1})-f(x_{i})}{h} - f'(x_{i})| = |\frac{1}{2}f''(c)h|
 \end{align}
 $$
+
 ##### Differential Equation Approximation:
 - For functions of one variable a differential equation is an equation involving any derivative of the function
 - Example: 
@@ -165,12 +167,15 @@ We Begin by discretizing the interval $[t_{0}, T]$:
 - $t_{0},t_{1}=t_{0}+\Delta t, t_{2}=t_{1}+\Delta{t} ,\dots$
 
 Forward Difference as it relates to a differential equation:
+
 $$
 y'(t_{i})\approx \frac{y(t_{i+1})-y(t_{i})}{\Delta t}
 $$
+
 Let $y(t_{i})=y_{i}, \to y'_{i} \approx \frac{y_{i+1}-y_{i}}{\Delta t}$; $y_{i}' = f(t_{i},y_{i})$
 
 $\frac{y_{i+1}-y_{i}}{\Delta t} \approx f(t_{i},y_{i})$ solve for $y_{i+1}$
+
 $y_{i+1} \approx y_{i} + \Delta tf(t_{i,y_{i}})$
 
 For Example:
@@ -205,17 +210,21 @@ $$
 & \approx \frac{f(a+h)-2f(a)+f(a+h)}{h^2}
 \end{align}
 $$
+
 ##### Functions of two variables
 
 ##### Functions of two variables
 
 The graph of a single‐variable function is
+
 $$
 y = f(x)
 \quad\longleftrightarrow\quad
 (x,\,f(x)),
 $$
+
 while a two‐variable function is
+
 $$
 z = f(x,y)
 \quad\longleftrightarrow\quad
@@ -224,18 +233,25 @@ $$
 
 **Examples:**
 - Volume of a cylinder of radius \(r\) and height \(h\):
+
   $$
   V(r,h) = \pi\,r^2\,h.
   $$
+  
 - Population at location \(x\) and time \(t\):
+
   $$
   P(x,t).
   $$
+  
 - Temperature along a rod at \(x\) and \(t\):
+
   $$
   T(x,t).
   $$
+  
 - Total vitamin C intake (tablet + glass of OJ):
+
   $$
   C(x,y) = 500x + 300y,
   \quad
@@ -255,10 +271,14 @@ $$
 - **Notation:** \(\partial z/\partial x,\;\partial f/\partial x,\;f_x\) and \(\partial z/\partial y,\;\partial f/\partial y,\;f_y\).
 
 - **Example function:**
+
+  
   $$
   f(x,y) = x^2 - 3xy + 2y^3.
   $$
+
   Then
+
   $$
   f_x(x,y) = 2x - 3y,
   \quad
@@ -266,6 +286,7 @@ $$
   $$
 
 - **At the point \((1,-1)\):**
+
   $$
   f_x(1,-1) = 2(1) - 3(-1) = 5,
   \quad
@@ -287,6 +308,7 @@ $$
 Approximate \(f_x(1,-1)\) and \(f_y(1,-1)\) for \(h=0.5,\,0.1,\,0.05\), where
 $f(x,y)=x^2 -3xy +2y^3.$
 Use the forward‐difference formulas:
+
 $$
 f_x(x,y)\approx \frac{f(x+h,y) - f(x,y)}{h},
 \qquad
@@ -300,6 +322,8 @@ $$
 
 2. **For each** \(h\in\{0.5,\,0.1,\,0.05\}\):  
    - Compute
+  
+     
      $$
      f_x(1,-1;h)
      = \frac{f(1+h,-1)-f(1,-1)}{h},
@@ -307,6 +331,7 @@ $$
      f_y(1,-1;h)
      = \frac{f(1,-1+h)-f(1,-1)}{h}.
      $$
+     
 2. **Tabulate** the results $(h,\;f_x,\;f_y)$.
 
 
