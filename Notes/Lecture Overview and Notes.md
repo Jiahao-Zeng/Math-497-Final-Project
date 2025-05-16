@@ -69,7 +69,7 @@ $$
 ##### Algorithm
 - Define function f(x)
 - Input x = a
-- Input \(h = \frac{1}{2}^i\) ; \(i = 1,2,\dots,10\)
+- Input $\(h = \frac{1}{2}^i\) ; \(i = 1,2,\dots,10\)$
 - Calculate:
 
 $$
@@ -87,7 +87,7 @@ $$
 f'(x) = \lim_{ h \to 0 } \frac{f(x+h)-f(x)}{h} 
 $$
 
-approximating \(f'(x_{i})\):
+approximating $\(f'(x_{i})\)$:
 
 ##### 1. Forward Difference:
 
@@ -125,15 +125,15 @@ f_{\text{avg}} =\frac{1}{b-a}\int_{a}^{b} f(x)dx
 \end{align}
 $$
 
-- evaluate average error: \(\left[ \sum(\text{error at any x}) \cdot h \right] \cdot \frac{1}{b-a}\)
+- evaluate average error: $\(\left[ \sum(\text{error at any x}) \cdot h \right] \cdot \frac{1}{b-a}\)$
 
 ##### Using Taylor Series to Calculate error
 
-1. FD \(f'(x_{i}) \approx \frac{f(x_{i+1}-f(x_{i}))}{h}; h =x_{i+1}-x_{i}\)
+1. FD $\(f'(x_{i}) \approx \frac{f(x_{i+1}-f(x_{i}))}{h}; h =x_{i+1}-x_{i}\)$
 
-- Around \(x = a_{i}; f(x) = \sum_{n = 0}^{\infty} \frac{1}{n!}f^{n}a(x-a)^n\)
+- Around $\(x = a_{i}; f(x) = \sum_{n = 0}^{\infty} \frac{1}{n!}f^{n}a(x-a)^n\)$
 
-- Taylor series expansion of f(x) around \(x_i\):
+- Taylor series expansion of f(x) around $\(x_i\)$:
 
 $$
 f(x) = x_{i}+f'(x_{i})(x-x_{i})+\frac{1}{2}f''(c)(x-x_{i})^2
@@ -155,10 +155,10 @@ $$
 - For functions of one variable a differential equation is an equation involving any derivative of the function
 
 - Examples:  
-  \(y'+y(t)=e^{t} \to y' = e^{t}-ty(t), f(t,y)\)  
-  \(y''-\sin ty'(t)=0\)  
-  \(y'(t)=\frac{1}{t}-\frac{1}{t^{2}}y(t)+y^{2}(t), f(t,y)\)  
-  \(y(t)y'(t)+y''(t)=\cos t\)
+  $\(y'+y(t)=e^{t} \to y' = e^{t}-ty(t), f(t,y)\) $ 
+  $\(y''-\sin ty'(t)=0\)$
+  $\(y'(t)=\frac{1}{t}-\frac{1}{t^{2}}y(t)+y^{2}(t), f(t,y)\)$  
+  $\(y(t)y'(t)+y''(t)=\cos t\)$
 
 - Note: If the differential equation involves the first derivative, then it is called a first order differential equation. Or 1st order ODE "Ordinary Differential Equation"
 
@@ -196,7 +196,7 @@ $$
 y'(t_i) \approx \frac{y(t_{i+1}) - y(t_i)}{\Delta t}
 $$
 
-Let \(y(t_i) = y_i\)
+Let $\(y(t_i) = y_i\)$
 
 $$
 \frac{y_{i+1} - y_i}{\Delta t} \approx f(t_i, y_i)
@@ -211,13 +211,13 @@ $$
 Example:
 
 Given:  
-\(y'(t) = \frac{1}{t^2} - \frac{1}{t}y - y^2\)  
-\(y(1) = -1\)  
-True solution: \(y = -\frac{1}{t}\)
+$\(y'(t) = \frac{1}{t^2} - \frac{1}{t}y - y^2\)$
+$\(y(1) = -1\)$  
+True solution: $\(y = -\frac{1}{t}\)$
 
-Use \(\Delta t = 0.2\), on \([1, 2]\)
+Use $\(\Delta t = 0.2\), on \([1, 2]\)$
 
-| i   | \(t_i\) | \(y_{i+1}\)     |
+| i   | $\(t_i\)$ | $\(y_{i+1}\)$     |
 | --- | ------- | ------------- |
 | 1   | 1.2     | -0.8          |
 | 2   | 1.4     | -0.6557       |
@@ -285,7 +285,7 @@ $$
 
 ##### Partial derivatives
 
-For \(z = f(x,y)\), we define
+For $\(z = f(x,y)\)$, we define
 
 $$
 f_x(x,y) = \frac{\partial f}{\partial x}(x,y),
@@ -293,7 +293,7 @@ f_x(x,y) = \frac{\partial f}{\partial x}(x,y),
 f_y(x,y) = \frac{\partial f}{\partial y}(x,y).
 $$
 
-- **Notation:** \(\partial z/\partial x,\;\partial f/\partial x,\;f_x\) and \(\partial z/\partial y,\;\partial f/\partial y,\;f_y\).
+- **Notation:** $\(\partial z/\partial x,\;\partial f/\partial x,\;f_x\)$ and $\(\partial z/\partial y,\;\partial f/\partial y,\;f_y\)$.
 
 - **Example function:**
 
@@ -329,8 +329,8 @@ $$
 
 ##### Example: Numerical approximation of partials
 
-Approximate \(f_x(1,-1)\) and \(f_y(1,-1)\) for \(h=0.5,\,0.1,\,0.05\), where  
-\(f(x,y)=x^2 -3xy +2y^3.\)  
+Approximate $\(f_x(1,-1)\)$ and $\(f_y(1,-1)\)$ for $\(h=0.5,\,0.1,\,0.05\)$, where  
+$\(f(x,y)=x^2 -3xy +2y^3.\)$  
 Use the forward‐difference formulas:
 
 $$
@@ -342,9 +342,9 @@ $$
 ##### Algorithm
 
 1. **Define**  
-   \(f(x,y)=x^2 -3xy +2y^3.\)
+   $\(f(x,y)=x^2 -3xy +2y^3.\)$
 
-2. **For each** \(h\in\{0.5,\,0.1,\,0.05\}\):  
+2. **For each** $\(h\in\{0.5,\,0.1,\,0.05\}\)$:  
    - Compute
 
 $$
@@ -355,7 +355,7 @@ f_y(1,-1;h)
 = \frac{f(1,-1+h)-f(1,-1)}{h}.
 $$
 
-3. **Tabulate** the results \((h,\;f_x,\;f_y)\)
+3. **Tabulate** the results $\((h,\;f_x,\;f_y)\)$
 
 ##### Real life applications Using Traffic Model
 
@@ -367,7 +367,7 @@ $$
 N_{AB}(t) = \int_A^B \rho(x,t)\,dx.
 $$
 
-- Flux at \(x,t\): \(q(x,t)\).
+- Flux at $\(x,t\)$: $\(q(x,t)\)$.
 
 - Conservation law (inflow minus outflow):
 
@@ -407,7 +407,7 @@ $$
 \boxed{\rho_t + v\,\rho_x = 0.}
 $$
 
-- Domain: \(0\le x\le 1,\;0\le t\le 1.\)
+- Domain: $\(0\le x\le 1,\;0\le t\le 1.\)$
 
 - Initial condition:
 
@@ -467,12 +467,10 @@ $$
 
 ##### Upwind Scheme
 
-- Plug into \(\rho_t + v\,\rho_x = 0\):
+- Plug into $\(\rho_t + v\,\rho_x = 0\)$:
 
 $$
-\frac{P_j^{n+1} - P_j^n}{\Delta t}
-+ v\,\frac{P_j^n - P_{j-1}^n}{\Delta x}
-= 0.
+\frac{P_j^{n+1} - P_j^n}{\Delta t} + v\,\frac{P_j^n - P_{j-1}^n}{\Delta x} = 0.
 $$
 
 - Define the CFL number:
@@ -481,7 +479,7 @@ $$
 \nu = \frac{v\,\Delta t}{\Delta x}.
 $$
 
-- Solve for \(P_j^{n+1}\):
+- Solve for $\(P_j^{n+1}\)$:
 
 $$
 \boxed{
@@ -529,9 +527,9 @@ $$
 N_{AB}(t) = \int_{A}^{B}\!\rho(x,t)\,dx,
 $$
 
-where \(\rho(x,t)\) is the car density.
+where $\(\rho(x,t)\)$ is the car density.
 
-- **Flux at a point:** \(q(x,t)\).
+- **Flux at a point:** $\(q(x,t)\)$.
 
 - **Rate of change = inflow − outflow:**
 
@@ -632,12 +630,10 @@ $$
 
 ##### Upwind Scheme
 
-1. Substitute into \(\rho_t + v\,\rho_x = 0\):
+1. Substitute into $\(\rho_t + v\,\rho_x = 0\)$:
 
 $$
-\frac{P_j^{n+1}-P_j^n}{\Delta t}
-+ v\,\frac{P_j^n - P_{j-1}^n}{\Delta x}
-= 0.
+\frac{P_j^{n+1}-P_j^n}{\Delta t} + v\,\frac{P_j^n - P_{j-1}^n}{\Delta x} = 0.
 $$
 
 2. Define the Courant number:
