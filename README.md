@@ -1,7 +1,7 @@
 https://jiahao-zeng.github.io/Math-497-Final-Project/
 
-This is the repository for our Math 497 Final. Math 497 is a class we are taking at Penn State. What is this course about?
-- This course is a math computational course and covers numerical methods for approximating derivatives and their applications in solving Ordinary and Partial Differential Equations. The course requires Python programming and  MATH 141 (141H), and MATH 220 for prerequisite.
+This is the repository for our Math 497 Final Project and overall course overview. Math 497 (Special Topics) is a course we are taking at Penn State. What is this course about?
+- This is a math computational course and covers numerical methods for approximating derivatives and their applications in solving Ordinary and Partial Differential Equations. The course requires Python programming and  MATH 141 (141H), and MATH 220 for prerequisite.
 ___
 The course prepares you for understanding of more advanced calculus concepts from the computational aspects. Improves your mathematical reasoning skills, and the ability to think critically, and analyze and solve problems computationally. You will be able to apply computational techniques in solve simple ordinary and partial differential equations, and more advance real life applications by the end of the course.
 ___
