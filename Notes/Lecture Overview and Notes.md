@@ -14,17 +14,23 @@ $$
 $$
 \text{Slope: } \frac{f(a+h-f(a))}{a+h-a}
 $$
+
 - We can use the slop of the point as an approximation of the slope of the tangent line
 
 ##### 1. Forward Difference:
 - The first derivative approximation of function f(x) at point x = a, given the h-value is:
+
+
 $$
 f'(a) \approx \frac{f(a+h)-f(a)}{h}
 $$
+
 ##### 2. Backward Difference: 
+
 $$
 f'(a) \approx \frac{f(a) - f(a-h)}{h}
 $$
+
 ##### 3. Centered difference: 
 
 $$
@@ -51,34 +57,39 @@ a &=1 \\
 $$
 
 - Finding the error
+
 $$
 \begin{align}
 \mid \text{true value - approximated value}\mid \\
 \text{Forward Difference Error @ h = 1:} \lvert 3-7 \rvert &= 4\\
 \text{Backward Difference Error @ h = 1:} \lvert 3-1 \rvert &= 2\\
 \text{Centered Difference Error @ h = 1:} \lvert 3-4 \rvert &= 1\\
-
 \end{align}
 $$
+
 ##### Algorithm
 - Define function f(x)
 - Input x = a
 - Input $h = \frac{1}{2}^i$ ; $i = 1,2,\dots,10$
 - Calculate:
+
 $$
 FD = \frac{f(a+h) -f(a)}{h} \text{ BD OR CD}
 $$
+
 - Evaluate Error
 - Print the calculation
 - For future reference don't limit the rounding as the numbers will be non-zero but never should be 0
 
 ##### First derivative approximation on an Interval $[a,b]$
 Limit definition for derivative as a function:
+
 $$
 \begin{align}
 f'(x) = \lim_{ h \to 0 } \frac{f(x+h)-f(x)}{h} 
 \end{align}
 $$
+
 approximating $f'(x_{i})$:
 ##### 1. Forward Difference:
 - The first derivative approximation of function f(x) at point x = a, given the h-value is:
