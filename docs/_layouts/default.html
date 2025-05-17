@@ -23,7 +23,7 @@
         nav ul {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 15px;
+            gap: 20px;
             width: 100%;
             padding: 0;
             margin: 0;
@@ -216,7 +216,7 @@
             <nav>
                 <ul>
                     {% if page.layout == 'handout' %}
-                        <li><a href="{{ '/handouts/' | relative_url }}" class="button">Back to Handouts</a></li>
+                        <!-- Removed Back to Handouts button since we have it in the content -->
                     {% elsif page.layout == 'handouts' %}
                         <!-- Navigation removed for handouts layout since we have the arrow button in content -->
                     {% else %}
