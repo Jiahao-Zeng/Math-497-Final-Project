@@ -59,8 +59,8 @@ layout: default
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex !important;
     flex-direction: column !important;
-    height: 250px !important; /* Fixed height for all cards */
-    width: 100% !important; /* Ensure full width within grid cell */
+    min-height: 250px !important; /* Changed from fixed height to min-height */
+    width: 100% !important;
 }
 
 .handout-card:hover {
@@ -73,6 +73,7 @@ layout: default
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important;
+    justify-content: space-between !important; /* Added to create space between content */
 }
 
 .handout-content h3 {
@@ -83,17 +84,13 @@ layout: default
 
 .handout-content p {
     color: rgba(255, 255, 255, 0.7);
-    margin: 0;
+    margin: 0 0 1rem 0; /* Added bottom margin */
     font-size: 0.9rem;
     line-height: 1.5;
     text-transform: none !important;
     letter-spacing: normal !important;
     text-align: left !important;
     flex: 1 !important;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
 }
 
 .read-more {
@@ -105,6 +102,7 @@ layout: default
     opacity: 0.7;
     transition: opacity 0.3s ease;
     margin-top: auto !important;
+    align-self: flex-start !important; /* Added to align to the left */
 }
 
 .handout-card:hover .read-more {
