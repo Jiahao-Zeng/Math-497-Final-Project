@@ -58,5 +58,5 @@ Solution for #2
 Changing velocity to something other than 1 gives us $\frac{\bar{v}\Delta t}{\Delta x}$ which gives us something different for v but does not change the formulation
 
 $$
-P_{j}^{n+1} = \left[ \gamma + \left( 1 - \frac{\bar{v}\Delta t}{\Delta x} \right)\left( 1 - \frac{\gamma}{2} \right) \right] P_{j}^{n} - \frac{\gamma}{2}P_{j}^{n-1} + \frac{\bar{v}\Delta t}{\Delta x}\left( 1 - \frac{\gamma}{2} \right)P_{j-1}^{n}
+P_{j}^{n+1} = \left[ \gamma + \left( 1 - \frac{\bar{v}\Delta t}{\Delta x} \right)\left( 1 - \frac{\gamma}{2} \right) \right] P_{j}^{n} - \frac{\gamma}{2}P_{j}^{n-1} + \left[ \frac{\bar{v}\Delta t}{\Delta x}\left( 1 - \frac{\gamma}{2} \right)P_{j-1}^{n} \right]
 $$
