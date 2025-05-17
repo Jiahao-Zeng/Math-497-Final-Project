@@ -244,7 +244,7 @@ The graph of a single‐variable function is
 $$
 y = f(x)
 \quad\longleftrightarrow\quad
-(x,\,f(x)),
+(x,f(x)),
 $$
 
 while a two‐variable function is
