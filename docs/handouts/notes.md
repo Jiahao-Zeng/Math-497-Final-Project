@@ -641,7 +641,7 @@ $$
 \nu = \frac{v\,\Delta t}{\Delta x}.
 $$
 
-3. Solve for \(P_j^{n+1}\):
+3. Solve for $\(P_j^{n+1}\)$:
 
 $$
 \boxed{
