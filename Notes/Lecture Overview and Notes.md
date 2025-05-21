@@ -1,7 +1,6 @@
 ---
 layout: article
 title: Notes
-permalink: /LectureNotes/
 use_math: true
 ---
 
