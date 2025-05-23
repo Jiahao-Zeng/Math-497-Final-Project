@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # 497 EXAM 1 PART 2
-# Denis Hoxhaj 
-# 7 March 2025
 
 # Question 1
 def func(x):
